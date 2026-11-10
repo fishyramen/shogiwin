@@ -33,7 +33,7 @@ input::placeholder,textarea::placeholder{color:var(--ink-muted)}
 .auth-logo-icon{width:48px;height:48px;border-radius:12px;background-image:url('https://i.pinimg.com/736x/49/ac/fb/49acfb611e6759cca8fcd04b6f27a4c7.jpg');background-size:cover;background-position:center;box-shadow:var(--shadow-md)}
 .auth-logo-text{font-weight:900;font-size:28px;letter-spacing:-1px}
 .auth-logo-text .red{color:var(--accent)}
-.auth-subtitle{color:var(--ink-muted);font-size:14px;margin-bottom:32px;margin-top:4px}
+.auth-subtitle{color:var(--ink-muted);font-size:14px;margin-bottom:24px;margin-top:4px}
 .auth-tabs{display:flex;background:var(--surface-2);border-radius:10px;padding:4px;margin-bottom:24px}
 .auth-tab{flex:1;padding:10px;border-radius:7px;font-weight:600;font-size:13px;color:var(--ink-muted);transition:all .2s}
 .auth-tab.active{background:var(--surface);color:var(--ink);box-shadow:var(--shadow-sm)}
@@ -53,6 +53,8 @@ input::placeholder,textarea::placeholder{color:var(--ink-muted)}
 .auth-divider{display:flex;align-items:center;gap:12px;color:var(--ink-muted);font-size:11px;text-transform:uppercase;letter-spacing:1px;margin:8px 0}
 .auth-divider::before,.auth-divider::after{content:'';flex:1;height:1px;background:var(--border)}
 .auth-error{background:var(--accent-soft);color:var(--accent);padding:10px 14px;border-radius:8px;font-size:13px}
+.demo-note{margin-top:16px;padding:10px 14px;background:var(--blue-soft);color:var(--blue);border-radius:8px;font-size:11px;line-height:1.4;display:flex;gap:8px;align-items:flex-start}
+.demo-note svg{width:14px;height:14px;flex-shrink:0;margin-top:1px}
 .home-view{flex-direction:column}
 .topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;border-bottom:1px solid var(--border);background:var(--surface);z-index:10;flex-shrink:0}
 .topbar-left{display:flex;align-items:center;gap:12px}
@@ -84,15 +86,15 @@ input::placeholder,textarea::placeholder{color:var(--ink-muted)}
 .page{display:none;padding:32px 24px;max-width:1200px;margin:0 auto;width:100%;animation:pageIn .35s ease}
 .page.active{display:block}
 @keyframes pageIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-.guest-banner{display:flex;align-items:center;justify-content:space-between;gap:16px;background:linear-gradient(135deg,var(--gold-soft),var(--surface));border:1px solid var(--gold);border-radius:14px;padding:14px 18px;margin-bottom:20px}
-.guest-banner-text{font-size:14px;color:var(--ink-soft)}.guest-banner-text b{color:var(--ink)}
 .play-grid{display:grid;grid-template-columns:1fr 320px;gap:24px}
 @media(max-width:900px){.play-grid{grid-template-columns:1fr}}
-.play-hero{background:linear-gradient(135deg,var(--surface) 0%,var(--surface-2) 100%);border:1px solid var(--border);border-radius:20px;padding:40px;position:relative;overflow:hidden;min-height:360px;display:flex;flex-direction:column;justify-content:space-between}
+.play-hero{background:linear-gradient(135deg,var(--surface) 0%,var(--surface-2) 100%);border:1px solid var(--border);border-radius:20px;padding:40px;position:relative;overflow:hidden;min-height:360px;display:flex;flex-direction:column;justify-content:center}
 .play-hero::before{content:'';position:absolute;top:-50%;right:-20%;width:500px;height:500px;background:radial-gradient(circle,rgba(184,55,46,.12),transparent 60%);pointer-events:none}
 .play-hero h1{font-size:42px;font-weight:900;letter-spacing:-1.5px;line-height:1.05;margin-bottom:12px;max-width:420px;position:relative}
 .play-hero p{color:var(--ink-soft);font-size:15px;line-height:1.5;max-width:400px;margin-bottom:28px;position:relative}
 .play-hero-actions{display:flex;gap:12px;position:relative;flex-wrap:wrap}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;background:var(--gold-soft);color:var(--gold);border-radius:999px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:16px;width:fit-content}
+.hero-badge svg{width:12px;height:12px}
 .mode-selector{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;position:relative}
 .mode-pill{padding:10px 16px;background:var(--surface-2);border:1px solid var(--border);border-radius:10px;font-size:13px;font-weight:600;color:var(--ink-soft);display:flex;align-items:center;gap:7px;transition:all .2s}
 .mode-pill svg{width:14px;height:14px}
@@ -105,6 +107,10 @@ input::placeholder,textarea::placeholder{color:var(--ink-muted)}
 .card-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--ink-muted);display:flex;align-items:center;gap:6px}
 .card-title svg{width:12px;height:12px}
 .card-badge{font-size:10px;font-weight:700;padding:2px 8px;background:var(--accent-soft);color:var(--accent);border-radius:4px;font-variant-numeric:tabular-nums}
+.signup-cta{background:linear-gradient(135deg,var(--accent-soft),var(--surface));border-color:var(--accent)}
+.signup-cta .card-title{color:var(--accent)}
+.signup-cta p{color:var(--ink-soft);font-size:13px;line-height:1.5;margin-bottom:14px}
+.signup-cta .btn{margin-top:8px}
 .season-badge{font-size:12px;font-weight:700;padding:4px 12px;background:var(--gold-soft);color:var(--gold);border-radius:999px;display:inline-flex;align-items:center;gap:6px}
 .season-badge svg{width:12px;height:12px}
 .stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
@@ -135,7 +141,6 @@ input::placeholder,textarea::placeholder{color:var(--ink-muted)}
 .lb-row{display:grid;grid-template-columns:60px 1fr 100px 100px 100px;align-items:center;padding:14px 20px;border-bottom:1px solid var(--border);transition:background .2s;cursor:pointer}
 .lb-row:last-child{border-bottom:none}.lb-row:hover{background:var(--surface-2)}
 .lb-row.header{background:var(--surface-2);font-size:11px;font-weight:700;color:var(--ink-muted);text-transform:uppercase;letter-spacing:.5px;cursor:default}
-.lb-row.header:hover{background:var(--surface-2)}
 .lb-row.self{background:var(--gold-soft)}
 .lb-rank{font-size:16px;font-weight:800;color:var(--ink-muted);font-variant-numeric:tabular-nums}
 .lb-rank.gold{color:#c9a961}.lb-rank.silver{color:#a8a8a8}.lb-rank.bronze{color:#b87333}
@@ -172,7 +177,7 @@ input::placeholder,textarea::placeholder{color:var(--ink-muted)}
 .match-result.loss{background:var(--accent-soft);color:var(--accent)}
 .match-result.draw{background:var(--gold-soft);color:var(--gold)}
 .match-info{flex:1;min-width:0}
-.match-opponent{font-size:14px;font-weight:600;display:flex;align-items:center;gap:6px}
+.match-opponent{font-size:14px;font-weight:600}
 .match-meta{font-size:11px;color:var(--ink-muted);display:flex;gap:10px;margin-top:2px}
 .match-elo{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums}
 .match-elo.pos{color:var(--success)}.match-elo.neg{color:var(--accent)}
@@ -198,7 +203,7 @@ input::placeholder,textarea::placeholder{color:var(--ink-muted)}
 .dm-chat-user-info{line-height:1.2}
 .dm-chat-user-name{font-size:14px;font-weight:600}
 .dm-chat-user-status{font-size:11px;color:var(--success);display:flex;align-items:center;gap:4px}
-.dm-chat-user-status.offline{color:var(--ink-muted)}
+.dm-chat-user-status .online-dot{width:6px;height:6px}
 .dm-messages{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:8px}
 .dm-msg{max-width:70%;display:flex;flex-direction:column;animation:msgIn .3s ease}
 @keyframes msgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
@@ -397,7 +402,6 @@ input::placeholder,textarea::placeholder{color:var(--ink-muted)}
 .confirm-icon{width:56px;height:56px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
 .confirm-icon svg{width:24px;height:24px}
 .confirm-icon.info{background:var(--blue-soft);color:var(--blue)}
-/* Coin flip */
 .coin-title{font-size:22px;font-weight:800;letter-spacing:-.5px;margin-bottom:4px}
 .coin-sub{color:var(--ink-muted);font-size:13px;margin-bottom:8px}
 .coin-scene{perspective:700px;width:130px;height:150px;margin:20px auto}
@@ -416,7 +420,6 @@ input::placeholder,textarea::placeholder{color:var(--ink-muted)}
 .coin-result{margin-top:16px;padding:14px;border-radius:12px;font-weight:700;font-size:15px;animation:msgIn .4s ease}
 .coin-result.win{background:var(--success-soft);color:var(--success)}
 .coin-result.lose{background:var(--accent-soft);color:var(--accent)}
-/* End modal */
 .end-modal-body{text-align:center;padding:10px 0}
 .end-icon{width:72px;height:72px;border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center}
 .end-icon svg{width:34px;height:34px}
@@ -466,7 +469,7 @@ input::placeholder,textarea::placeholder{color:var(--ink-muted)}
       <button class="auth-tab" data-tab="signup">Sign up</button>
     </div>
     <form class="auth-form" id="loginForm">
-      <label>Email</label><input type="email" id="loginEmail" placeholder="you@email.com" autocomplete="email" required>
+      <label>Email or username</label><input type="text" id="loginEmail" placeholder="you@email.com" autocomplete="email" required>
       <label>Password</label><input type="password" id="loginPassword" placeholder="••••••••" autocomplete="current-password" required>
       <div class="auth-error hidden" id="loginError"></div>
       <button type="submit" class="btn btn-primary btn-block btn-lg">Log in</button>
@@ -481,6 +484,7 @@ input::placeholder,textarea::placeholder{color:var(--ink-muted)}
     </form>
     <div class="auth-divider">or</div>
     <button class="btn btn-secondary btn-block" id="guestBtn">Continue as guest</button>
+    <div class="demo-note" id="demoNote"><i data-lucide="info"></i><span id="demoNoteText"></span></div>
   </div>
 </div>
 
@@ -507,59 +511,9 @@ input::placeholder,textarea::placeholder{color:var(--ink-muted)}
     </div>
   </div>
   <div class="home-content">
-    <div class="page active" id="page-play">
-      <div class="guest-banner hidden" id="guestBanner">
-        <div class="guest-banner-text"><b>You're playing as a guest.</b> Create an account to play real players, save your rating, and chat.</div>
-        <button class="btn btn-primary btn-sm" id="guestBannerBtn"><i data-lucide="user-plus"></i> Create account</button>
-      </div>
-      <div class="play-grid">
-        <div class="play-hero">
-          <div>
-            <h1>Find a match, build your rating.</h1>
-            <p>Ranked matchmaking pairs you with players of similar skill and win rate. If no one is in queue, you play a bot calibrated to your level.</p>
-            <div class="play-hero-actions">
-              <button class="btn btn-primary btn-lg" id="findMatchBtn"><i data-lucide="search"></i> Find match</button>
-              <button class="btn btn-secondary btn-lg" id="botMatchBtn"><i data-lucide="cpu"></i> Bot only</button>
-            </div>
-            <div class="mode-selector">
-              <button class="mode-pill active" data-mode="ranked"><i data-lucide="trophy"></i> Ranked</button>
-              <button class="mode-pill" data-mode="casual"><i data-lucide="gamepad-2"></i> Casual</button>
-              <button class="mode-pill" data-mode="bullet"><i data-lucide="zap"></i> Bullet</button>
-            </div>
-            <div class="mode-description" id="modeDescription">Competitive matches that affect your Elo rating. You are paired with opponents of similar rating and win rate.</div>
-          </div>
-        </div>
-        <div class="side-stack">
-          <div class="card level-card">
-            <div class="level-header"><div class="card-title"><i data-lucide="star"></i> Level</div><div class="level-number" id="levelNum">1</div></div>
-            <div class="level-bar"><div class="level-bar-fill" id="levelBarFill" style="width:0%"></div></div>
-            <div class="level-meta"><span id="levelXp">0 / 100 XP</span><span id="levelNext">Next: Lv 2</span></div>
-          </div>
-          <div class="card">
-            <div class="card-header"><div class="card-title"><i data-lucide="bar-chart-3"></i> Your stats</div><div class="online-count"><span class="online-dot"></span><span id="onlineCount">1,247</span></div></div>
-            <div class="stats-grid">
-              <div class="stat-card"><div class="stat-label">Elo</div><div class="stat-value gold" id="homeElo">1000</div></div>
-              <div class="stat-card"><div class="stat-label">Games</div><div class="stat-value" id="homeGames">0</div></div>
-              <div class="stat-card"><div class="stat-label">Wins</div><div class="stat-value green" id="homeWins">0</div></div>
-              <div class="stat-card"><div class="stat-label">Win rate</div><div class="stat-value" id="homeWinRate">0%</div></div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header"><div class="card-title"><i data-lucide="sparkles"></i> Quick actions</div></div>
-            <div class="quick-actions">
-              <button class="quick-action" data-action="puzzle"><i data-lucide="puzzle"></i> Puzzles</button>
-              <button class="quick-action" data-action="learn"><i data-lucide="book-open"></i> Learn</button>
-              <button class="quick-action" data-action="analyze"><i data-lucide="line-chart"></i> Analysis</button>
-              <button class="quick-action" data-action="friends"><i data-lucide="users"></i> Friends</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="page active" id="page-play"></div>
     <div class="page" id="page-leaderboard">
-      <div class="page-header">
-        <div><div class="page-title">Leaderboard <span class="season-badge"><i data-lucide="swords"></i> Season 1</span></div><div class="page-subtitle">Top players ranked by Elo rating</div></div>
-      </div>
+      <div class="page-header"><div><div class="page-title">Leaderboard <span class="season-badge"><i data-lucide="swords"></i> Season 1</span></div><div class="page-subtitle">Top players ranked by Elo rating</div></div></div>
       <div class="leaderboard-filters">
         <select class="filter-select" id="lbTimeFilter"><option value="alltime">All time</option><option value="month">This month</option><option value="week">This week</option><option value="today">Today</option></select>
         <select class="filter-select" id="lbCountryFilter"><option value="world">World</option></select>
@@ -583,7 +537,15 @@ input::placeholder,textarea::placeholder{color:var(--ink-muted)}
     <div class="page" id="page-profile"><div id="profileContent"></div></div>
     <div class="page" id="page-settings">
       <div class="page-header"><div><div class="page-title">Settings</div><div class="page-subtitle">Customize your experience</div></div></div>
-      <div class="settings-section"><div class="settings-section-title">Account</div>
+      <div class="settings-section guest-only" id="guestSettingsCta">
+        <div class="settings-card signup-cta" style="padding:24px;">
+          <div class="card-title" style="margin-bottom:10px;"><i data-lucide="sparkles"></i> Unlock everything</div>
+          <p>You're playing as a guest. Create a free account to save your rating, climb the leaderboard, play real players, and chat with friends.</p>
+          <button class="btn btn-primary btn-block" id="settingsSignupBtn"><i data-lucide="user-plus"></i> Create free account</button>
+          <button class="btn btn-secondary btn-block" id="settingsLoginBtn"><i data-lucide="log-in"></i> Log in</button>
+        </div>
+      </div>
+      <div class="settings-section member-only"><div class="settings-section-title">Account</div>
         <div class="settings-card">
           <div class="settings-row"><div class="settings-row-info"><div class="settings-row-label">Display name</div><div class="settings-row-desc">Shown on your profile and in games</div></div><button class="btn btn-secondary btn-sm" id="editDisplayNameBtn">Edit</button></div>
           <div class="settings-row"><div class="settings-row-info"><div class="settings-row-label">Username</div><div class="settings-row-desc" id="usernameChangeDesc">Can be changed once per week</div></div><button class="btn btn-secondary btn-sm" id="editUsernameBtn">Edit</button></div>
@@ -598,9 +560,15 @@ input::placeholder,textarea::placeholder{color:var(--ink-muted)}
           <div class="settings-row"><div class="settings-row-info"><div class="settings-row-label">Haptic feedback</div><div class="settings-row-desc">Vibration on mobile</div></div><div class="toggle active" data-setting="haptic"><div class="toggle-knob"></div></div></div>
         </div>
       </div>
+      <div class="settings-section member-only"><div class="settings-section-title">Privacy</div>
+        <div class="settings-card">
+          <div class="settings-row"><div class="settings-row-info"><div class="settings-row-label">Show online status</div><div class="settings-row-desc">Let others see when you're online</div></div><div class="toggle active" data-setting="showOnline"><div class="toggle-knob"></div></div></div>
+          <div class="settings-row"><div class="settings-row-info"><div class="settings-row-label">Allow DMs from anyone</div><div class="settings-row-desc">Turn off for friends only</div></div><div class="toggle active" data-setting="allowDms"><div class="toggle-knob"></div></div></div>
+        </div>
+      </div>
       <div class="settings-section"><div class="settings-section-title">Session</div>
         <div class="settings-card">
-          <div class="settings-row"><div class="settings-row-info"><div class="settings-row-label">Log out</div><div class="settings-row-desc">Sign out on this device</div></div><button class="btn btn-danger btn-sm" id="logoutBtn">Log out</button></div>
+          <div class="settings-row"><div class="settings-row-info"><div class="settings-row-label" id="sessionLabel">Log out</div><div class="settings-row-desc" id="sessionDesc">Sign out on this device</div></div><button class="btn btn-danger btn-sm" id="logoutBtn">Log out</button></div>
         </div>
       </div>
     </div>
@@ -742,174 +710,388 @@ input::placeholder,textarea::placeholder{color:var(--ink-muted)}
 <script>
 (() => {
 'use strict';
-// ==================== SUPABASE ====================
-const SUPABASE_URL = 'https://dmwgnfzkgsstgszrvljz.supabase.co';
+
+// ==================== SUPABASE (optional, fault-tolerant) ====================
+// To go live: paste your real Supabase URL + anon key below and run the SQL schema.
+// Until then the app runs in local demo mode so every feature works out of the box.
+const SUPABASE_URL = 'https://dmwgnfzkgsstgszrvljz.supabase.co'; 
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRtd2duZnprZ3NzdGdzenJ2bGp6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTQyNTk0MzEsImV4cCI6MjEwOTgzNTQzMX0.w_Sm2remqluxBHyZilrT-mfUJSXcGBinBJOtSwgXtBs';
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const SUPABASE_LIVE = /^https:\/\//.test(SUPABASE_URL) && SUPABASE_ANON_KEY.indexOf('eyJ') === 0;
+let supabase = null;
+try { if (SUPABASE_LIVE && window.supabase) supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY); }
+catch(e) { console.warn('Supabase unavailable, using demo mode.'); }
 
-let currentUser = null, currentProfile = null, isGuest = false;
-let settings = { theme:'dark', showMoves:true, sound:true, haptic:true, showFlag:true,
-  ...JSON.parse(localStorage.getItem('shogi_settings_v3')||'{}') };
-function saveSettings(){ localStorage.setItem('shogi_settings_v3', JSON.stringify(settings)); }
-
+// ==================== LOCAL STORE (demo mode) ====================
+const DB_KEY='shogi_win_db_v1', SESSION_KEY='shogi_win_session_v1', SETTINGS_KEY='shogi_win_settings_v1';
 const COUNTRIES=[{code:'US',name:'United States',flag:'🇺🇸'},{code:'JP',name:'Japan',flag:'🇯🇵'},{code:'GB',name:'United Kingdom',flag:'🇬🇧'},{code:'CN',name:'China',flag:'🇨🇳'},{code:'KR',name:'South Korea',flag:'🇰🇷'},{code:'FR',name:'France',flag:'🇫🇷'},{code:'DE',name:'Germany',flag:'🇩🇪'},{code:'RU',name:'Russia',flag:'🇷🇺'},{code:'IN',name:'India',flag:'🇮🇳'},{code:'BR',name:'Brazil',flag:'🇧🇷'},{code:'CA',name:'Canada',flag:'🇨🇦'},{code:'AU',name:'Australia',flag:'🇦🇺'},{code:'MX',name:'Mexico',flag:'🇲🇽'},{code:'ES',name:'Spain',flag:'🇪🇸'},{code:'IT',name:'Italy',flag:'🇮🇹'},{code:'NL',name:'Netherlands',flag:'🇳🇱'},{code:'PL',name:'Poland',flag:'🇵🇱'},{code:'UA',name:'Ukraine',flag:'🇺🇦'},{code:'VN',name:'Vietnam',flag:'🇻🇳'},{code:'ID',name:'Indonesia',flag:'🇮🇩'}];
+let db={users:{},matches:[],messages:{}};
+try{ const raw=localStorage.getItem(DB_KEY); if(raw) db=JSON.parse(raw); }catch(e){}
+if(!db.users)db.users={}; if(!db.matches)db.matches=[]; if(!db.messages)db.messages={};
+function saveDb(){ try{localStorage.setItem(DB_KEY,JSON.stringify(db));}catch(e){} }
+function getSession(){ try{return JSON.parse(localStorage.getItem(SESSION_KEY));}catch(e){return null;} }
+function setSession(s){ try{ if(s)localStorage.setItem(SESSION_KEY,JSON.stringify(s)); else localStorage.removeItem(SESSION_KEY);}catch(e){} }
+let settings={theme:'dark',showMoves:true,sound:true,haptic:true,showFlag:true};
+try{ settings={...settings,...JSON.parse(localStorage.getItem(SETTINGS_KEY)||'{}')}; }catch(e){}
+function saveSettings(){ try{localStorage.setItem(SETTINGS_KEY,JSON.stringify(settings));}catch(e){} }
 
+function seedUsers(){
+  if(Object.keys(db.users).length>0) return;
+  const names=['Habu','Sota','Fujii','Akira','Watanabe','Rei','Tendo','Meijin','Kiryu','Shinjin','Ryuo','Kisei','Osho','Oza','Kioh','Dragon','Bishop','Silver','Gold','Lance'];
+  names.forEach((name,i)=>{
+    const id='u_seed_'+i;
+    const country=COUNTRIES[Math.floor(Math.random()*COUNTRIES.length)].code;
+    const w=Math.floor(Math.random()*60),l=Math.floor(Math.random()*45),d=Math.floor(Math.random()*8);
+    db.users[id]={id,username:name.toLowerCase(),display_name:name,email:name.toLowerCase()+'@demo.shogi.win',password:'demo123',avatar_url:null,banner_url:null,bio:'Shogi enthusiast. Always learning.',country,show_flag:Math.random()>0.2,elo:800+Math.floor(Math.random()*900),wins:w,losses:l,draws:d,games:w+l+d,level:1+Math.floor(Math.random()*20),xp:Math.floor(Math.random()*100),created_at:Date.now()-Math.floor(Math.random()*1e10),last_username_change:0,is_bot:false};
+  });
+  saveDb();
+}
+seedUsers();
+
+let currentUser=null, currentProfile=null, isGuest=false;
+
+// ==================== HELPERS ====================
 const $=id=>document.getElementById(id);
-function refreshIcons(){ if(window.lucide) try{ lucide.createIcons(); }catch(e){} }
-function haptic(ms){ if(settings.haptic&&navigator.vibrate) try{navigator.vibrate(ms);}catch(e){} }
-function getInitial(name){ return (name||'?').trim()[0]?.toUpperCase()||'?'; }
-function formatDate(ts){ const d=new Date(ts),diff=(Date.now()-d)/1000; if(diff<60)return'just now'; if(diff<3600)return Math.floor(diff/60)+'m ago'; if(diff<86400)return Math.floor(diff/3600)+'h ago'; if(diff<604800)return Math.floor(diff/86400)+'d ago'; return d.toLocaleDateString(); }
+function refreshIcons(){ if(window.lucide){ try{lucide.createIcons();}catch(e){} } }
+function haptic(ms){ if(settings.haptic&&navigator.vibrate){ try{navigator.vibrate(ms);}catch(e){} } }
+function getInitial(n){ return (n||'?').trim()[0]? (n.trim()[0].toUpperCase()):'?'; }
+function formatDate(ts){ const diff=(Date.now()-ts)/1000; if(diff<60)return'just now'; if(diff<3600)return Math.floor(diff/60)+'m ago'; if(diff<86400)return Math.floor(diff/3600)+'h ago'; if(diff<604800)return Math.floor(diff/86400)+'d ago'; return new Date(ts).toLocaleDateString(); }
 function formatTime(s){ return Math.floor(s/60)+':'+String(Math.max(0,s%60)).padStart(2,'0'); }
 function xpForLevel(l){ return 100*l*l; }
 function levelFromXp(xp,cur=1){ let lvl=cur,rem=xp; while(rem>=xpForLevel(lvl)){rem-=xpForLevel(lvl);lvl++;} return{level:lvl,xp:rem,next:xpForLevel(lvl)}; }
 function escapeHtml(s){ if(!s)return''; return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 function getCountry(code){ return COUNTRIES.find(c=>c.code===code); }
 function getCountryFlag(code){ const c=getCountry(code); return c?c.flag:''; }
-function cap(s){ return s.charAt(0).toUpperCase()+s.slice(1); }
-function wlRatio(p){ return p.games>0 ? p.wins/p.games : 0; }
+function cap(s){ return s?s.charAt(0).toUpperCase()+s.slice(1):''; }
+function wlRatio(p){ return p&&p.games>0? p.wins/p.games : 0; }
+function getRank(elo){ return Object.values(db.users).filter(u=>!u.is_bot&&u.elo>elo).length+1; }
+function renderAvatar(el,p){ if(!p){el.textContent='?';el.style.background='var(--avatar-bg)';el.style.backgroundImage='';return;} if(p.avatar_url){el.style.backgroundImage=`url(${p.avatar_url})`;el.style.background='';el.textContent='';} else{el.style.backgroundImage='';el.style.background='linear-gradient(135deg,var(--avatar-bg) 0%,#d4a96a 100%)';el.textContent=getInitial(p.display_name);} }
+function renderAvatarFromData(el){ const url=el.dataset.avatarUrl,name=el.dataset.avatarName||'?'; if(url){el.style.backgroundImage=`url(${url})`;el.style.background='';el.textContent='';} else{el.style.backgroundImage='';el.style.background='linear-gradient(135deg,var(--avatar-bg) 0%,#d4a96a 100%)';el.textContent=getInitial(name);} }
 
 // ==================== TOASTS ====================
 function toast(title,desc,type='info'){ const wrap=$('toastWrap'); const icons={success:'check-circle',error:'alert-circle',info:'info'}; const el=document.createElement('div'); el.className='toast'; el.innerHTML=`<div class="toast-icon ${type}"><i data-lucide="${icons[type]}"></i></div><div class="toast-content"><div class="toast-title">${title}</div>${desc?`<div class="toast-desc">${desc}</div>`:''}</div>`; wrap.appendChild(el); refreshIcons(); setTimeout(()=>{el.classList.add('leaving');setTimeout(()=>el.remove(),250);},3500); }
 
 // ==================== CONFIRM / PROMPT ====================
-function showConfirm({title='Are you sure?',message='',okText='Confirm',cancelText='Cancel',danger=true,icon='alert-triangle'}={}){ return new Promise(resolve=>{ $('confirmTitle').textContent=title; $('confirmMessage').textContent=message; $('confirmOk').textContent=okText; $('confirmCancel').textContent=cancelText; $('confirmOk').className='btn '+(danger?'btn-danger':'btn-primary'); $('confirmIcon').innerHTML=`<i data-lucide="${icon}"></i>`; $('confirmIcon').className='confirm-icon'+(danger?'':' info'); refreshIcons(); openModal('confirmModal'); const clean=()=>{$('confirmOk').onclick=null;$('confirmCancel').onclick=null;closeModal('confirmModal');}; $('confirmOk').onclick=()=>{clean();resolve(true);}; $('confirmCancel').onclick=()=>{clean();resolve(false);}; }); }
-function showPrompt({title='Input',label='Value',defaultValue='',placeholder=''}={}){ return new Promise(resolve=>{ $('promptTitle').textContent=title; $('promptLabel').textContent=label; $('promptInput').value=defaultValue; $('promptInput').placeholder=placeholder; openModal('promptModal'); setTimeout(()=>$('promptInput').focus(),100); const clean=()=>{$('promptOk').onclick=null;$('promptCancel').onclick=null;$('promptInput').onkeydown=null;closeModal('promptModal');}; $('promptOk').onclick=()=>{const v=$('promptInput').value.trim();clean();resolve(v);}; $('promptCancel').onclick=()=>{clean();resolve(null);}; $('promptInput').onkeydown=e=>{if(e.key==='Enter')$('promptOk').click();if(e.key==='Escape')$('promptCancel').click();}; }); }
+function showConfirm({title='Are you sure?',message='',okText='Confirm',cancelText='Cancel',danger=true,icon='alert-triangle'}={}){ return new Promise(res=>{ $('confirmTitle').textContent=title; $('confirmMessage').textContent=message; $('confirmOk').textContent=okText; $('confirmCancel').textContent=cancelText; $('confirmOk').className='btn '+(danger?'btn-danger':'btn-primary'); $('confirmIcon').innerHTML=`<i data-lucide="${icon}"></i>`; $('confirmIcon').className='confirm-icon'+(danger?'':' info'); refreshIcons(); openModal('confirmModal'); const clean=()=>{$('confirmOk').onclick=null;$('confirmCancel').onclick=null;closeModal('confirmModal');}; $('confirmOk').onclick=()=>{clean();res(true);}; $('confirmCancel').onclick=()=>{clean();res(false);}; }); }
+function showPrompt({title='Input',label='Value',defaultValue='',placeholder=''}={}){ return new Promise(res=>{ $('promptTitle').textContent=title; $('promptLabel').textContent=label; $('promptInput').value=defaultValue; $('promptInput').placeholder=placeholder; openModal('promptModal'); setTimeout(()=>$('promptInput').focus(),100); const clean=()=>{$('promptOk').onclick=null;$('promptCancel').onclick=null;$('promptInput').onkeydown=null;closeModal('promptModal');}; $('promptOk').onclick=()=>{const v=$('promptInput').value.trim();clean();res(v);}; $('promptCancel').onclick=()=>{clean();res(null);}; $('promptInput').onkeydown=e=>{if(e.key==='Enter')$('promptOk').click();if(e.key==='Escape')$('promptCancel').click();}; }); }
 
 // ==================== MODALS ====================
 function openModal(id){ $(id).classList.add('active'); refreshIcons(); }
 function closeModal(id){ $(id).classList.remove('active'); }
 document.querySelectorAll('[data-close-modal]').forEach(b=>b.addEventListener('click',()=>closeModal(b.dataset.closeModal)));
-document.querySelectorAll('.modal-backdrop').forEach(b=>b.addEventListener('click',e=>{ if(e.target===b) b.classList.remove('active'); }));
+document.querySelectorAll('.modal-backdrop').forEach(b=>b.addEventListener('click',e=>{ if(e.target===b)b.classList.remove('active'); }));
 
 // ==================== THEME ====================
-function applyTheme(){ document.documentElement.setAttribute('data-theme',settings.theme); const btn=$('themeToggle'); if(btn){ btn.innerHTML=`<i data-lucide="${settings.theme==='dark'?'sun':'moon'}"></i>`; } refreshIcons(); }
+function applyTheme(){ document.documentElement.setAttribute('data-theme',settings.theme); const btn=$('themeToggle'); if(btn)btn.innerHTML=`<i data-lucide="${settings.theme==='dark'?'sun':'moon'}"></i>`; refreshIcons(); }
 $('themeToggle').addEventListener('click',()=>{ settings.theme=settings.theme==='dark'?'light':'dark'; saveSettings(); applyTheme(); });
 
 // ==================== VIEW ROUTER ====================
 function showView(id){ document.querySelectorAll('.view').forEach(v=>v.classList.remove('active')); $(id).classList.add('active'); }
-function showPage(name){ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active')); $('page-'+name).classList.add('active'); document.querySelectorAll('.nav-tab,.mobile-nav-btn').forEach(t=>t.classList.toggle('active',t.dataset.page===name)); if(name==='profile'&&currentProfile)renderProfile(currentProfile.id); if(name==='leaderboard')renderLeaderboard(); if(name==='dms')renderDmList(); if(name==='play')updateHomeStats(); }
+function showPage(name){ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active')); $('page-'+name).classList.add('active'); document.querySelectorAll('.nav-tab,.mobile-nav-btn').forEach(t=>t.classList.toggle('active',t.dataset.page===name)); if(name==='profile'&&currentProfile)renderProfile(currentProfile.id); if(name==='leaderboard')renderLeaderboard(); if(name==='dms')renderDmList(); if(name==='play')renderPlayPage(); if(name==='settings')renderSettingsVisibility(); }
 
-// ==================== SUPABASE HELPERS ====================
-async function fetchProfile(id){ const{data,error}=await supabase.from('profiles').select('*').eq('id',id).single(); return error?null:data; }
-async function updateProfile(upd){ if(!currentProfile)return; const{error}=await supabase.from('profiles').update(upd).eq('id',currentProfile.id); if(error){toast('Error',error.message,'error');return;} Object.assign(currentProfile,upd); }
-async function uploadImage(file,bucket){ const ext=file.name.split('.').pop(); const path=`${currentUser.id}/${Date.now()}.${ext}`; const{error}=await supabase.storage.from(bucket).upload(path,file); if(error)throw error; const{data}=supabase.storage.from(bucket).getPublicUrl(path); return data.publicUrl; }
-async function getLeaderboardRank(elo){ const{count}=await supabase.from('profiles').select('id',{count:'exact',head:true}).gt('elo',elo).eq('is_bot',false); return (count||0)+1; }
+// ==================== AUTH TABS ====================
+document.querySelectorAll('.auth-tab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    document.querySelectorAll('.auth-tab').forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    const isLogin=tab.dataset.tab==='login';
+    $('loginForm').classList.toggle('hidden',!isLogin);
+    $('signupForm').classList.toggle('hidden',isLogin);
+    $('loginError').classList.add('hidden');
+    $('signupError').classList.add('hidden');
+  });
+});
+function showLoginError(msg){ $('loginError').textContent=msg; $('loginError').classList.remove('hidden'); }
+function showSignupError(msg){ $('signupError').textContent=msg; $('signupError').classList.remove('hidden'); }
 
-// ==================== AUTH ====================
-supabase.auth.getSession().then(({data:{session}})=>{ if(session){currentUser=session.user;initApp();} else showView('authView'); });
-supabase.auth.onAuthStateChange((event,session)=>{ if(event==='SIGNED_IN'&&session){currentUser=session.user;isGuest=false;initApp();} else if(event==='SIGNED_OUT'){currentUser=null;currentProfile=null;isGuest=false;showView('authView');} });
-async function initApp(){ currentProfile=await fetchProfile(currentUser.id); showView('homeView'); applyGuestUI(); updateUserChip(); updateHomeStats(); showPage('play'); applyTheme(); subscribeToDms(); refreshIcons(); }
-
-$('signupForm').addEventListener('submit',async e=>{ e.preventDefault(); const dn=$('signupDisplayName').value.trim(),un=$('signupUsername').value.trim().toLowerCase(),em=$('signupEmail').value.trim(),pw=$('signupPassword').value; if(!/^[a-zA-Z0-9_]+$/.test(un)){$('signupError').textContent='Username: letters, numbers, underscore only.';$('signupError').classList.remove('hidden');return;} const{data:ex}=await supabase.from('profiles').select('id').eq('username',un).maybeSingle(); if(ex){$('signupError').textContent='Username already taken.';$('signupError').classList.remove('hidden');return;} const{data,error}=await supabase.auth.signUp({email:em,password:pw,options:{data:{display_name:dn,username:un}}}); if(error){$('signupError').textContent=error.message;$('signupError').classList.remove('hidden');return;} await supabase.from('profiles').update({username:un,display_name:dn}).eq('id',data.user.id); toast('Welcome!','Check your email to confirm your account.','success'); });
-$('loginForm').addEventListener('submit',async e=>{ e.preventDefault(); const{error}=await supabase.auth.signInWithPassword({email:$('loginEmail').value.trim(),password:$('loginPassword').value}); if(error){$('loginError').textContent=error.message;$('loginError').classList.remove('hidden');} });
-$('guestBtn').addEventListener('click',()=>{ isGuest=true; currentProfile=null; showView('homeView'); applyGuestUI(); updateUserChip(); updateHomeStats(); showPage('play'); applyTheme(); refreshIcons(); });
-$('logoutBtn').addEventListener('click',async()=>{ const ok=await showConfirm({title:'Log out?',message:'You will be signed out on this device.',okText:'Log out',danger:false,icon:'log-out'}); if(ok)await supabase.auth.signOut(); });
+// ==================== SIGN UP / LOG IN / GUEST ====================
+$('signupForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const dn=$('signupDisplayName').value.trim(), un=$('signupUsername').value.trim().toLowerCase(), em=$('signupEmail').value.trim().toLowerCase(), pw=$('signupPassword').value;
+  if(!/^[a-zA-Z0-9_]+$/.test(un))return showSignupError('Username: letters, numbers, underscore only.');
+  if(un.length<3||un.length>20)return showSignupError('Username must be 3-20 characters.');
+  if(pw.length<6)return showSignupError('Password must be at least 6 characters.');
+  if(Object.values(db.users).some(u=>u.username===un))return showSignupError('Username already taken.');
+  if(Object.values(db.users).some(u=>u.email===em))return showSignupError('Email already registered.');
+  const id='u_'+Date.now();
+  db.users[id]={id,username:un,display_name:dn,email:em,password:pw,avatar_url:null,banner_url:null,bio:'',country:'US',show_flag:true,elo:1000,wins:0,losses:0,draws:0,games:0,level:1,xp:0,created_at:Date.now(),last_username_change:0,is_bot:false};
+  saveDb();
+  setSession({userId:id,guest:false});
+  currentUser=id; currentProfile=db.users[id]; isGuest=false;
+  enterApp(); toast('Welcome!', 'Your account has been created.','success');
+});
+$('loginForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const id=$('loginEmail').value.trim().toLowerCase(), pw=$('loginPassword').value;
+  const user=Object.values(db.users).find(u=>u.email===id||u.username===id);
+  if(!user||user.password!==pw)return showLoginError('Invalid email/username or password.');
+  setSession({userId:user.id,guest:false});
+  currentUser=user.id; currentProfile=user; isGuest=false;
+  enterApp(); toast('Welcome back', user.display_name,'success');
+});
+$('guestBtn').addEventListener('click',()=>{ setSession({guest:true}); currentUser=null; currentProfile=null; isGuest=true; enterApp(); });
+$('logoutBtn').addEventListener('click',async()=>{
+  if(isGuest){ setSession(null); isGuest=false; currentProfile=null; showView('authView'); return; }
+  const ok=await showConfirm({title:'Log out?',message:'You will be signed out on this device.',okText:'Log out',danger:false,icon:'log-out'});
+  if(ok){ setSession(null); currentUser=null; currentProfile=null; showView('authView'); }
+});
 $('guestAuthBtn').addEventListener('click',()=>showView('authView'));
-$('guestBannerBtn').addEventListener('click',()=>showView('authView'));
+$('settingsSignupBtn').addEventListener('click',()=>{ showView('authView'); document.querySelector('.auth-tab[data-tab="signup"]').click(); });
+$('settingsLoginBtn').addEventListener('click',()=>{ showView('authView'); document.querySelector('.auth-tab[data-tab="login"]').click(); });
 
-function applyGuestUI(){ document.querySelectorAll('.guest-only-hidden').forEach(el=>el.style.display=isGuest?'none':''); $('guestAuthBtn').classList.toggle('hidden',!isGuest); $('guestBanner').classList.toggle('hidden',!isGuest); }
+// ==================== ENTER APP ====================
+function enterApp(){
+  showView('homeView');
+  applyGuestUI();
+  updateUserChip();
+  renderPlayPage();
+  showPage('play');
+  applyTheme();
+  refreshIcons();
+}
+function applyGuestUI(){
+  document.querySelectorAll('.guest-only-hidden').forEach(el=>el.style.display=isGuest?'none':'');
+  document.querySelectorAll('.member-only').forEach(el=>el.style.display=isGuest?'none':'');
+  document.querySelectorAll('.guest-only').forEach(el=>el.style.display=isGuest?'':'none');
+  $('guestAuthBtn').classList.toggle('hidden',!isGuest);
+  $('sessionLabel').textContent=isGuest?'Exit guest mode':'Log out';
+  $('sessionDesc').textContent=isGuest?'Return to the login screen':'Sign out on this device';
+  $('logoutBtn').textContent=isGuest?'Exit':'Log out';
+}
+function updateUserChip(){
+  const avatar=$('userChipAvatar');
+  if(isGuest||!currentProfile){
+    avatar.textContent='?'; avatar.style.background='var(--avatar-bg)'; avatar.style.backgroundImage='';
+    $('userChipName').innerHTML='Guest <span class="guest-badge">Guest</span>';
+    $('userChipMeta').innerHTML='<span>Play vs bot</span>';
+  } else {
+    renderAvatar(avatar,currentProfile);
+    let n=escapeHtml(currentProfile.display_name);
+    if(settings.showFlag&&currentProfile.show_flag&&currentProfile.country)n+=` <span class="flag">${getCountryFlag(currentProfile.country)}</span>`;
+    $('userChipName').innerHTML=n;
+    $('userChipMeta').innerHTML=`<i data-lucide="zap"></i><span>${currentProfile.elo}</span>`;
+  }
+  refreshIcons();
+}
 
-function updateUserChip(){ const avatar=$('userChipAvatar'); if(isGuest||!currentProfile){ avatar.textContent='?'; avatar.style.background='var(--avatar-bg)'; avatar.style.backgroundImage=''; $('userChipName').innerHTML='Guest <span class="guest-badge">Guest</span>'; $('userChipMeta').textContent=''; return; } renderAvatar(avatar,currentProfile); let n=escapeHtml(currentProfile.display_name); if(settings.showFlag&&currentProfile.show_flag&&currentProfile.country)n+=` <span class="flag">${getCountryFlag(currentProfile.country)}</span>`; $('userChipName').innerHTML=n; $('userChipMeta').innerHTML=`<i data-lucide="zap"></i><span>${currentProfile.elo}</span>`; refreshIcons(); }
-function updateHomeStats(){ if(isGuest||!currentProfile){ $('homeElo').textContent='—'; $('homeGames').textContent='0'; $('homeWins').textContent='0'; $('homeWinRate').textContent='0%'; $('levelNum').textContent='1'; $('levelBarFill').style.width='0%'; $('levelXp').textContent='0 / 100 XP'; $('levelNext').textContent='Next: Lv 2'; return; } const p=currentProfile; $('homeElo').textContent=p.elo; $('homeGames').textContent=p.games; $('homeWins').textContent=p.wins; const rate=p.games>0?Math.round(p.wins/p.games*100):0; $('homeWinRate').textContent=rate+'%'; const lv=levelFromXp(p.xp,p.level); $('levelNum').textContent=lv.level; $('levelBarFill').style.width=((lv.xp/lv.next)*100)+'%'; $('levelXp').textContent=lv.xp+' / '+lv.next+' XP'; $('levelNext').textContent='Next: Lv '+(lv.level+1); }
+// ==================== PLAY PAGE (guest vs member) ====================
+const MODE_DESCRIPTIONS={ranked:'Competitive matches that affect your Elo rating. You are paired with opponents of similar rating and win rate.',casual:'Unrated matches for practice. No Elo change, no timer — just play.',bullet:'Fast 3-minute games. Unrated, no Elo change. Quick thinking wins.'};
+let selectedMode='ranked';
+function renderPlayPage(){
+  const el=$('page-play');
+  if(isGuest){
+    el.innerHTML=`
+      <div class="play-grid">
+        <div class="play-hero">
+          <div class="hero-badge"><i data-lucide="user"></i> Guest mode</div>
+          <h1>Play shogi. Right now.</h1>
+          <p>No account needed. Battle the engine to practice your openings and tactics. Your games won't be saved.</p>
+          <div class="play-hero-actions">
+            <button class="btn btn-primary btn-lg" id="guestPlayBot"><i data-lucide="cpu"></i> Play vs Bot</button>
+          </div>
+          <div class="mode-selector">
+            <button class="mode-pill active" data-mode="casual"><i data-lucide="gamepad-2"></i> Casual</button>
+            <button class="mode-pill" data-mode="bullet"><i data-lucide="zap"></i> Bullet</button>
+          </div>
+          <div class="mode-description" id="modeDescription">${MODE_DESCRIPTIONS.casual}</div>
+        </div>
+        <div class="side-stack">
+          <div class="card signup-cta">
+            <div class="card-title" style="margin-bottom:10px;"><i data-lucide="sparkles"></i> Unlock everything</div>
+            <p>Create a free account to save your rating, climb the leaderboard, play real players, and chat.</p>
+            <button class="btn btn-primary btn-block" id="guestSignupHero"><i data-lucide="user-plus"></i> Create free account</button>
+            <button class="btn btn-secondary btn-block" id="guestLoginHero"><i data-lucide="log-in"></i> Log in</button>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-title"><i data-lucide="sparkles"></i> More to explore</div></div>
+            <div class="quick-actions">
+              <button class="quick-action" data-action="puzzle"><i data-lucide="puzzle"></i> Puzzles</button>
+              <button class="quick-action" data-action="learn"><i data-lucide="book-open"></i> Learn</button>
+              <button class="quick-action" data-action="analyze"><i data-lucide="line-chart"></i> Analysis</button>
+              <button class="quick-action" data-action="friends"><i data-lucide="users"></i> Friends</button>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    $('guestPlayBot').addEventListener('click',()=>{ selectedMode=($('modeDescription').dataset.m)||'casual'; startMatchmaking(true); });
+    $('guestSignupHero').addEventListener('click',()=>{ showView('authView'); document.querySelector('.auth-tab[data-tab="signup"]').click(); });
+    $('guestLoginHero').addEventListener('click',()=>{ showView('authView'); document.querySelector('.auth-tab[data-tab="login"]').click(); });
+    el.querySelectorAll('.mode-pill').forEach(p=>p.addEventListener('click',()=>{ el.querySelectorAll('.mode-pill').forEach(x=>x.classList.remove('active')); p.classList.add('active'); selectedMode=p.dataset.mode; $('modeDescription').textContent=MODE_DESCRIPTIONS[selectedMode]; }));
+    el.querySelectorAll('.quick-action').forEach(b=>b.addEventListener('click',()=>toast('Coming soon','This feature is in development.','info')));
+  } else {
+    const p=currentProfile;
+    el.innerHTML=`
+      <div class="play-grid">
+        <div class="play-hero">
+          <h1>Find a match, build your rating.</h1>
+          <p>Ranked matchmaking pairs you with players of similar skill and win rate. If no one is in queue, you play a bot calibrated to your level.</p>
+          <div class="play-hero-actions">
+            <button class="btn btn-primary btn-lg" id="findMatchBtn"><i data-lucide="search"></i> Find match</button>
+            <button class="btn btn-secondary btn-lg" id="botMatchBtn"><i data-lucide="cpu"></i> Bot only</button>
+          </div>
+          <div class="mode-selector">
+            <button class="mode-pill ${selectedMode==='ranked'?'active':''}" data-mode="ranked"><i data-lucide="trophy"></i> Ranked</button>
+            <button class="mode-pill ${selectedMode==='casual'?'active':''}" data-mode="casual"><i data-lucide="gamepad-2"></i> Casual</button>
+            <button class="mode-pill ${selectedMode==='bullet'?'active':''}" data-mode="bullet"><i data-lucide="zap"></i> Bullet</button>
+          </div>
+          <div class="mode-description" id="modeDescription">${MODE_DESCRIPTIONS[selectedMode]}</div>
+        </div>
+        <div class="side-stack">
+          <div class="card level-card">
+            <div class="level-header"><div class="card-title"><i data-lucide="star"></i> Level</div><div class="level-number" id="levelNum">1</div></div>
+            <div class="level-bar"><div class="level-bar-fill" id="levelBarFill" style="width:0%"></div></div>
+            <div class="level-meta"><span id="levelXp">0 / 100 XP</span><span id="levelNext">Next: Lv 2</span></div>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-title"><i data-lucide="bar-chart-3"></i> Your stats</div><div class="online-count"><span class="online-dot"></span><span id="onlineCount">1,247</span></div></div>
+            <div class="stats-grid">
+              <div class="stat-card"><div class="stat-label">Elo</div><div class="stat-value gold" id="homeElo">${p?p.elo:1000}</div></div>
+              <div class="stat-card"><div class="stat-label">Games</div><div class="stat-value" id="homeGames">${p?p.games:0}</div></div>
+              <div class="stat-card"><div class="stat-label">Wins</div><div class="stat-value green" id="homeWins">${p?p.wins:0}</div></div>
+              <div class="stat-card"><div class="stat-label">Win rate</div><div class="stat-value" id="homeWinRate">${p&&p.games>0?Math.round(p.wins/p.games*100):0}%</div></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-title"><i data-lucide="sparkles"></i> Quick actions</div></div>
+            <div class="quick-actions">
+              <button class="quick-action" data-action="puzzle"><i data-lucide="puzzle"></i> Puzzles</button>
+              <button class="quick-action" data-action="learn"><i data-lucide="book-open"></i> Learn</button>
+              <button class="quick-action" data-action="analyze"><i data-lucide="line-chart"></i> Analysis</button>
+              <button class="quick-action" data-action="friends"><i data-lucide="users"></i> Friends</button>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    if(p){ const lv=levelFromXp(p.xp,p.level); $('levelNum').textContent=lv.level; $('levelBarFill').style.width=((lv.xp/lv.next)*100)+'%'; $('levelXp').textContent=lv.xp+' / '+lv.next+' XP'; $('levelNext').textContent='Next: Lv '+(lv.level+1); }
+    $('findMatchBtn').addEventListener('click',()=>startMatchmaking(false));
+    $('botMatchBtn').addEventListener('click',()=>startMatchmaking(true));
+    el.querySelectorAll('.mode-pill').forEach(pill=>pill.addEventListener('click',()=>{ el.querySelectorAll('.mode-pill').forEach(x=>x.classList.remove('active')); pill.classList.add('active'); selectedMode=pill.dataset.mode; $('modeDescription').textContent=MODE_DESCRIPTIONS[selectedMode]; }));
+    el.querySelectorAll('.quick-action').forEach(b=>b.addEventListener('click',()=>toast('Coming soon','This feature is in development.','info')));
+  }
+  refreshIcons();
+}
 
 // ==================== NAV ====================
 document.querySelectorAll('.nav-tab,.mobile-nav-btn').forEach(t=>t.addEventListener('click',()=>showPage(t.dataset.page)));
 $('userChip').addEventListener('click',()=>{ if(currentProfile){showPage('profile');renderProfile(currentProfile.id);} });
-
-// ==================== MODE SELECTOR ====================
-const MODE_DESCRIPTIONS={ ranked:'Competitive matches that affect your Elo rating. You are paired with opponents of similar rating and win rate.', casual:'Unrated matches for practice. No Elo change, no timer — just play.', bullet:'Fast 3-minute games. Unrated, no Elo change. Quick thinking wins.' };
-let selectedMode='ranked';
-document.querySelectorAll('.mode-pill').forEach(pill=>pill.addEventListener('click',()=>{ document.querySelectorAll('.mode-pill').forEach(p=>p.classList.remove('active')); pill.classList.add('active'); selectedMode=pill.dataset.mode; $('modeDescription').textContent=MODE_DESCRIPTIONS[selectedMode]; }));
 
 // ==================== LEADERBOARD ====================
 function populateCountryFilter(){ const sel=$('lbCountryFilter'); sel.innerHTML='<option value="world">World</option>'; COUNTRIES.forEach(c=>{const o=document.createElement('option');o.value=c.code;o.textContent=`${c.flag} ${c.name}`;sel.appendChild(o);}); }
 populateCountryFilter();
 $('lbTimeFilter').addEventListener('change',renderLeaderboard);
 $('lbCountryFilter').addEventListener('change',renderLeaderboard);
-async function renderLeaderboard(){ const table=$('leaderboardTable'); table.innerHTML='<div class="lb-empty">Loading...</div>'; const cf=$('lbCountryFilter').value; let q=supabase.from('profiles').select('*').eq('is_bot',false).order('elo',{ascending:false}).limit(50); if(cf!=='world')q=q.eq('country',cf).eq('show_flag',true); const{data:users}=await q; if(!users||!users.length){table.innerHTML='<div class="lb-empty">No players found.</div>';return;} let html=`<div class="lb-row header"><div>Rank</div><div>Player</div><div>Elo</div><div>Wins</div><div>Win rate</div></div>`; users.forEach((u,i)=>{ const rank=i+1; const rc=rank===1?'gold':rank===2?'silver':rank===3?'bronze':''; const isSelf=currentProfile&&u.id===currentProfile.id; const rate=u.games>0?Math.round(u.wins/u.games*100):0; html+=`<div class="lb-row${isSelf?' self':''}" data-user-id="${u.id}"><div class="lb-rank ${rc}">${rank}</div><div class="lb-user"><div class="avatar" data-avatar-url="${u.avatar_url||''}" data-avatar-name="${escapeHtml(u.display_name)}"></div><div class="lb-user-info"><div class="lb-user-name">${escapeHtml(u.display_name)}${u.show_flag&&u.country?` <span class="flag">${getCountryFlag(u.country)}</span>`:''}</div><div class="lb-user-handle">@${escapeHtml(u.username)}</div></div></div><div class="lb-stat elo">${u.elo}</div><div class="lb-stat">${u.wins}</div><div class="lb-stat">${rate}%</div></div>`; }); table.innerHTML=html; table.querySelectorAll('.avatar[data-avatar-url]').forEach(el=>renderAvatarFromData(el)); table.querySelectorAll('.lb-row[data-user-id]').forEach(row=>row.addEventListener('click',()=>{showPage('profile');renderProfile(row.dataset.userId);})); }
+function renderLeaderboard(){
+  const table=$('leaderboardTable'); const cf=$('lbCountryFilter').value;
+  let users=Object.values(db.users).filter(u=>!u.is_bot);
+  if(cf!=='world')users=users.filter(u=>u.country===cf&&u.show_flag);
+  users.sort((a,b)=>b.elo-a.elo); users=users.slice(0,50);
+  if(!users.length){table.innerHTML='<div class="lb-empty">No players found.</div>';return;}
+  let html=`<div class="lb-row header"><div>Rank</div><div>Player</div><div>Elo</div><div>Wins</div><div>Win rate</div></div>`;
+  users.forEach((u,i)=>{
+    const rank=i+1; const rc=rank===1?'gold':rank===2?'silver':rank===3?'bronze':'';
+    const isSelf=currentProfile&&u.id===currentProfile.id;
+    const rate=u.games>0?Math.round(u.wins/u.games*100):0;
+    html+=`<div class="lb-row${isSelf?' self':''}" data-user-id="${u.id}"><div class="lb-rank ${rc}">${rank}</div><div class="lb-user"><div class="avatar" data-avatar-url="${u.avatar_url||''}" data-avatar-name="${escapeHtml(u.display_name)}"></div><div class="lb-user-info"><div class="lb-user-name">${escapeHtml(u.display_name)}${u.show_flag&&u.country?` <span class="flag">${getCountryFlag(u.country)}</span>`:''}</div><div class="lb-user-handle">@${escapeHtml(u.username)}</div></div></div><div class="lb-stat elo">${u.elo}</div><div class="lb-stat">${u.wins}</div><div class="lb-stat">${rate}%</div></div>`;
+  });
+  table.innerHTML=html;
+  table.querySelectorAll('.avatar[data-avatar-url]').forEach(el=>renderAvatarFromData(el));
+  table.querySelectorAll('.lb-row[data-user-id]').forEach(row=>row.addEventListener('click',()=>{showPage('profile');renderProfile(row.dataset.userId);}));
+}
 
 // ==================== PROFILE ====================
-async function renderProfile(userId){ const container=$('profileContent'); const user=await fetchProfile(userId); if(!user){container.innerHTML='<div style="padding:40px;text-align:center;color:var(--ink-muted);">User not found.</div>';return;} const isSelf=currentProfile&&currentProfile.id===userId; const bannerStyle=user.banner_url?`background-image:url(${user.banner_url});`:`background-color:var(--avatar-bg);`; const lv=levelFromXp(user.xp,user.level); const rate=user.games>0?Math.round(user.wins/user.games*100):0; const rank=await getLeaderboardRank(user.elo); const canMsg=!isSelf&&!isGuest&&currentProfile; let actions=isSelf?`<button class="btn btn-secondary" id="editProfileBtn"><i data-lucide="edit-3"></i> Edit profile</button>`:`<button class="btn btn-ghost" id="profileMoreBtn"><i data-lucide="more-horizontal"></i></button>${canMsg?`<button class="btn btn-primary" id="messageBtn"><i data-lucide="message-square"></i> Message</button>`:''}`; const{data:matches}=await supabase.from('matches').select('*').or(`white.eq.${userId},black.eq.${userId}`).order('started_at',{ascending:false}).limit(10); let mhtml=''; if(matches&&matches.length){ for(const m of matches){ const pa=m.white===userId?'white':'black'; const oppId=m.white===userId?m.black:m.white; const op=await fetchProfile(oppId); const on=op?op.display_name:'Bot'; const res=m.winner==='draw'?'draw':m.winner===pa?'win':'loss'; const ec=pa==='white'?m.elo_change_white:m.elo_change_black; mhtml+=`<div class="match-item"><div class="match-result ${res}">${res}</div><div class="match-info"><div class="match-opponent">vs ${escapeHtml(on)}</div><div class="match-meta"><span>${pa==='white'?'Sente':'Gote'}</span><span>${formatDate(m.started_at)}</span></div></div><div class="match-elo ${ec>0?'pos':ec<0?'neg':''}">${ec>0?'+':''}${ec||0}</div></div>`; } } else mhtml='<div style="padding:30px;text-align:center;color:var(--ink-muted);font-size:13px;">No matches yet.</div>'; const country=getCountry(user.country); const flag=user.show_flag&&country?`<span class="flag">${country.flag}</span>`:''; container.innerHTML=`
-  <div class="profile-banner" style="${bannerStyle}"></div>
-  <div class="profile-header">
-    <div class="profile-avatar-wrap"><div class="profile-avatar" data-avatar-url="${user.avatar_url||''}" data-avatar-name="${escapeHtml(user.display_name)}"></div></div>
-    <div class="profile-info">
-      <div class="profile-display-name">${escapeHtml(user.display_name)} ${flag}</div>
-      <div class="profile-handle"><i data-lucide="at-sign"></i> ${escapeHtml(user.username)}${isSelf?` <span style="color:var(--ink-muted);margin-left:4px;">• Level ${lv.level}</span>`:''}</div>
-      ${user.bio?`<div class="profile-bio">${escapeHtml(user.bio)}</div>`:(isSelf?`<div class="profile-bio empty">Add a bio to tell people about yourself.</div>`:'')}
-      <div class="profile-meta">
-        <div class="profile-meta-item"><i data-lucide="zap"></i> <strong>${user.elo}</strong> Elo</div>
-        <div class="profile-meta-item"><i data-lucide="hash"></i> <strong>#${rank}</strong> ranked</div>
-        <div class="profile-meta-item"><i data-lucide="gamepad-2"></i> <strong>${user.games}</strong> games</div>
-        <div class="profile-meta-item"><i data-lucide="trophy"></i> <strong>${rate}%</strong> win rate</div>
-        <div class="profile-meta-item"><i data-lucide="calendar"></i> Joined ${new Date(user.created_at).toLocaleDateString()}</div>
-      </div>
-    </div>
-    <div class="profile-actions">${actions}</div>
-  </div>
-  <div class="profile-body">
-    <div class="card"><div class="card-header"><div class="card-title"><i data-lucide="history"></i> Recent matches</div><span class="card-badge">${matches?.length||0}</span></div><div class="match-list">${mhtml}</div></div>
-    <div style="display:flex;flex-direction:column;gap:16px;">
-      <div class="card"><div class="card-header"><div class="card-title"><i data-lucide="bar-chart-3"></i> Stats</div></div>
-        <div class="stats-grid">
-          <div class="stat-card"><div class="stat-label">Elo</div><div class="stat-value gold">${user.elo}</div></div>
-          <div class="stat-card"><div class="stat-label">Rank</div><div class="stat-value">#${rank}</div></div>
-          <div class="stat-card"><div class="stat-label">Wins</div><div class="stat-value green">${user.wins}</div></div>
-          <div class="stat-card"><div class="stat-label">Losses</div><div class="stat-value accent">${user.losses}</div></div>
-          <div class="stat-card"><div class="stat-label">Draws</div><div class="stat-value">${user.draws}</div></div>
-          <div class="stat-card"><div class="stat-label">Level</div><div class="stat-value gold">${lv.level}</div></div>
+function renderProfile(userId){
+  const container=$('profileContent'); const user=db.users[userId];
+  if(!user){container.innerHTML='<div style="padding:40px;text-align:center;color:var(--ink-muted);">User not found.</div>';return;}
+  const isSelf=currentProfile&&currentProfile.id===userId;
+  const bannerStyle=user.banner_url?`background-image:url(${user.banner_url});`:`background-color:var(--avatar-bg);`;
+  const lv=levelFromXp(user.xp,user.level); const rate=user.games>0?Math.round(user.wins/user.games*100):0;
+  const rank=getRank(user.elo); const canMsg=!isSelf&&!isGuest&&currentProfile;
+  let actions=isSelf?`<button class="btn btn-secondary" id="editProfileBtn"><i data-lucide="edit-3"></i> Edit profile</button>`:`<button class="btn btn-ghost" id="profileMoreBtn"><i data-lucide="more-horizontal"></i></button>${canMsg?`<button class="btn btn-primary" id="messageBtn"><i data-lucide="message-square"></i> Message</button>`:''}`;
+  const matches=db.matches.filter(m=>m.white===userId||m.black===userId).slice(-10).reverse();
+  let mhtml='';
+  if(matches.length){ matches.forEach(m=>{ const pa=m.white===userId?'white':'black'; const oppId=m.white===userId?m.black:m.white; const op=db.users[oppId]; const on=op?op.display_name:'Bot'; const res=m.winner==='draw'?'draw':m.winner===pa?'win':'loss'; const ec=pa==='white'?m.elo_change_white:m.elo_change_black; mhtml+=`<div class="match-item"><div class="match-result ${res}">${res}</div><div class="match-info"><div class="match-opponent">vs ${escapeHtml(on)}</div><div class="match-meta"><span>${pa==='white'?'Sente':'Gote'}</span><span>${formatDate(m.started_at)}</span></div></div><div class="match-elo ${ec>0?'pos':ec<0?'neg':''}">${ec>0?'+':''}${ec||0}</div></div>`; }); }
+  else mhtml='<div style="padding:30px;text-align:center;color:var(--ink-muted);font-size:13px;">No matches yet.</div>';
+  const country=getCountry(user.country); const flag=user.show_flag&&country?`<span class="flag">${country.flag}</span>`:'';
+  container.innerHTML=`
+    <div class="profile-banner" style="${bannerStyle}"></div>
+    <div class="profile-header">
+      <div class="profile-avatar-wrap"><div class="profile-avatar" data-avatar-url="${user.avatar_url||''}" data-avatar-name="${escapeHtml(user.display_name)}"></div></div>
+      <div class="profile-info">
+        <div class="profile-display-name">${escapeHtml(user.display_name)} ${flag}</div>
+        <div class="profile-handle"><i data-lucide="at-sign"></i> ${escapeHtml(user.username)}${isSelf?` <span style="color:var(--ink-muted);margin-left:4px;">• Level ${lv.level}</span>`:''}</div>
+        ${user.bio?`<div class="profile-bio">${escapeHtml(user.bio)}</div>`:(isSelf?`<div class="profile-bio empty">Add a bio to tell people about yourself.</div>`:'')}
+        <div class="profile-meta">
+          <div class="profile-meta-item"><i data-lucide="zap"></i> <strong>${user.elo}</strong> Elo</div>
+          <div class="profile-meta-item"><i data-lucide="hash"></i> <strong>#${rank}</strong> ranked</div>
+          <div class="profile-meta-item"><i data-lucide="gamepad-2"></i> <strong>${user.games}</strong> games</div>
+          <div class="profile-meta-item"><i data-lucide="trophy"></i> <strong>${rate}%</strong> win rate</div>
+          <div class="profile-meta-item"><i data-lucide="calendar"></i> Joined ${new Date(user.created_at).toLocaleDateString()}</div>
         </div>
       </div>
-      ${isSelf?`<div class="card level-card"><div class="level-header"><div class="card-title"><i data-lucide="star"></i> Progress</div><div class="level-number">${lv.level}</div></div><div class="level-bar"><div class="level-bar-fill" style="width:${(lv.xp/lv.next)*100}%"></div></div><div class="level-meta"><span>${lv.xp} / ${lv.next} XP</span><span>Lv ${lv.level+1}</span></div></div>`:''}
+      <div class="profile-actions">${actions}</div>
     </div>
-  </div>`;
+    <div class="profile-body">
+      <div class="card"><div class="card-header"><div class="card-title"><i data-lucide="history"></i> Recent matches</div><span class="card-badge">${matches.length}</span></div><div class="match-list">${mhtml}</div></div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div class="card"><div class="card-header"><div class="card-title"><i data-lucide="bar-chart-3"></i> Stats</div></div>
+          <div class="stats-grid">
+            <div class="stat-card"><div class="stat-label">Elo</div><div class="stat-value gold">${user.elo}</div></div>
+            <div class="stat-card"><div class="stat-label">Rank</div><div class="stat-value">#${rank}</div></div>
+            <div class="stat-card"><div class="stat-label">Wins</div><div class="stat-value green">${user.wins}</div></div>
+            <div class="stat-card"><div class="stat-label">Losses</div><div class="stat-value accent">${user.losses}</div></div>
+            <div class="stat-card"><div class="stat-label">Draws</div><div class="stat-value">${user.draws}</div></div>
+            <div class="stat-card"><div class="stat-label">Level</div><div class="stat-value gold">${lv.level}</div></div>
+          </div>
+        </div>
+        ${isSelf?`<div class="card level-card"><div class="level-header"><div class="card-title"><i data-lucide="star"></i> Progress</div><div class="level-number">${lv.level}</div></div><div class="level-bar"><div class="level-bar-fill" style="width:${(lv.xp/lv.next)*100}%"></div></div><div class="level-meta"><span>${lv.xp} / ${lv.next} XP</span><span>Lv ${lv.level+1}</span></div></div>`:''}
+      </div>
+    </div>`;
   container.querySelectorAll('[data-avatar-url]').forEach(el=>renderAvatarFromData(el));
   refreshIcons();
   $('editProfileBtn')?.addEventListener('click',openEditProfileModal);
   $('messageBtn')?.addEventListener('click',()=>{openDmWith(userId);showPage('dms');});
   $('profileMoreBtn')?.addEventListener('click',e=>{e.stopPropagation();showContextMenu(e.currentTarget,buildUserContextMenu(userId));});
 }
-function renderAvatarFromData(el){ const url=el.dataset.avatarUrl,name=el.dataset.avatarName||'?'; if(url){el.style.backgroundImage=`url(${url})`;el.style.background='';el.textContent='';} else{el.style.backgroundImage='';el.style.background=`linear-gradient(135deg,var(--avatar-bg) 0%,#d4a96a 100%)`;el.textContent=getInitial(name);} }
-function renderAvatar(el,p){ if(!p){el.textContent='?';el.style.background='var(--avatar-bg)';el.style.backgroundImage='';return;} if(p.avatar_url){el.style.backgroundImage=`url(${p.avatar_url})`;el.style.background='';el.textContent='';} else{el.style.backgroundImage='';el.style.background=`linear-gradient(135deg,var(--avatar-bg) 0%,#d4a96a 100%)`;el.textContent=getInitial(p.display_name);} }
 
 // ==================== EDIT PROFILE ====================
 let editProfileState={avatar_url:null,banner_url:null,bio:''};
 function openEditProfileModal(){ editProfileState={avatar_url:currentProfile.avatar_url,banner_url:currentProfile.banner_url,bio:currentProfile.bio||''}; updateEditProfilePreview(); $('editBioInput').value=editProfileState.bio; $('bioCharCount').textContent=editProfileState.bio.length; openModal('editProfileModal'); }
-function updateEditProfilePreview(){ const av=$('editAvatarPreview'),bn=$('editBannerPreview'); if(editProfileState.avatar_url){av.style.backgroundImage=`url(${editProfileState.avatar_url})`;av.textContent='';} else{av.style.backgroundImage='';av.textContent=getInitial(currentProfile?.display_name||'?');} if(editProfileState.banner_url)bn.style.backgroundImage=`url(${editProfileState.banner_url})`; else bn.style.backgroundImage=''; }
-$('editAvatarPreview').addEventListener('click',()=>openCropper('avatar',false,async url=>{ const blob=await(await fetch(url)).blob(); const f=new File([blob],'avatar.jpg',{type:'image/jpeg'}); try{editProfileState.avatar_url=await uploadImage(f,'avatars');updateEditProfilePreview();}catch(e){toast('Upload failed',e.message,'error');} }));
-$('editBannerPreview').addEventListener('click',()=>openCropper('banner',true,async url=>{ const blob=await(await fetch(url)).blob(); const f=new File([blob],'banner.jpg',{type:'image/jpeg'}); try{editProfileState.banner_url=await uploadImage(f,'banners');updateEditProfilePreview();}catch(e){toast('Upload failed',e.message,'error');} }));
+function updateEditProfilePreview(){ const av=$('editAvatarPreview'),bn=$('editBannerPreview'); if(editProfileState.avatar_url){av.style.backgroundImage=`url(${editProfileState.avatar_url})`;av.textContent='';} else{av.style.backgroundImage='';av.textContent=getInitial(currentProfile?.display_name||'?');} bn.style.backgroundImage=editProfileState.banner_url?`url(${editProfileState.banner_url})`:''; }
+$('editAvatarPreview').addEventListener('click',()=>openCropper('avatar',false,url=>{editProfileState.avatar_url=url;updateEditProfilePreview();}));
+$('editBannerPreview').addEventListener('click',()=>openCropper('banner',true,url=>{editProfileState.banner_url=url;updateEditProfilePreview();}));
 $('editBioInput').addEventListener('input',e=>{editProfileState.bio=e.target.value;$('bioCharCount').textContent=e.target.value.length;});
-$('editProfileSave').addEventListener('click',async()=>{ await updateProfile({avatar_url:editProfileState.avatar_url,banner_url:editProfileState.banner_url,bio:editProfileState.bio}); closeModal('editProfileModal'); renderProfile(currentProfile.id); updateUserChip(); toast('Profile updated',null,'success'); });
+$('editProfileSave').addEventListener('click',()=>{ Object.assign(currentProfile,{avatar_url:editProfileState.avatar_url,banner_url:editProfileState.banner_url,bio:editProfileState.bio}); saveDb(); closeModal('editProfileModal'); renderProfile(currentProfile.id); updateUserChip(); toast('Profile updated',null,'success'); });
 
 // ==================== CROPPER ====================
 let cropperState=null;
-function openCropper(field,isBanner,onSave){ const input=document.createElement('input'); input.type='file'; input.accept='image/*'; input.onchange=e=>{ const file=e.target.files[0]; if(!file)return; const reader=new FileReader(); reader.onload=ev=>{ const img=new Image(); img.onload=()=>{ cropperState={field,isBanner,img,zoom:1,panX:0,panY:0,onSave}; const wrap=$('cropperWrap'),ov=$('cropperOverlay'); wrap.classList.toggle('banner',isBanner); ov.classList.toggle('circle',!isBanner); $('cropperTitle').textContent=isBanner?'Crop banner':'Crop avatar'; $('cropperZoom').value=1; openModal('cropperModal'); setTimeout(initCropperCanvas,50); }; img.src=ev.target.result; }; reader.readAsDataURL(file); }; input.click(); }
+function openCropper(field,isBanner,onSave){ const input=document.createElement('input'); input.type='file'; input.accept='image/*'; input.onchange=e=>{ const file=e.target.files[0]; if(!file)return; const reader=new FileReader(); reader.onload=ev=>{ const img=new Image(); img.onload=()=>{ cropperState={field,isBanner,img,zoom:1,panX:0,panY:0,onSave}; const wrap=$('cropperWrap'),ov=$('cropperOverlay'); wrap.classList.toggle('banner',isBanner); ov.classList.toggle('circle',!isBanner); $('cropperTitle').textContent=isBanner?'Crop banner':'Crop avatar'; $('cropperZoom').value=1; openModal('cropperModal'); setTimeout(initCropperCanvas,60); }; img.src=ev.target.result; }; reader.readAsDataURL(file); }; input.click(); }
 function initCropperCanvas(){ const canvas=$('cropperCanvas'),wrap=$('cropperWrap'),ov=$('cropperOverlay'),ctx=canvas.getContext('2d'); const rect=wrap.getBoundingClientRect(); canvas.width=rect.width*devicePixelRatio; canvas.height=rect.height*devicePixelRatio; ctx.scale(devicePixelRatio,devicePixelRatio); if(cropperState.isBanner){ov.style.left='0';ov.style.top='0';ov.style.right='0';ov.style.bottom='0';ov.style.width='';ov.style.height='';} else{const s=Math.min(rect.width,rect.height)-20;ov.style.width=s+'px';ov.style.height=s+'px';ov.style.left=(rect.width-s)/2+'px';ov.style.top=(rect.height-s)/2+'px';} function draw(){ ctx.clearRect(0,0,rect.width,rect.height); const{img,zoom,panX,panY}=cropperState; const ar=img.width/img.height; let dw,dh; if(ar>rect.width/rect.height){dh=rect.height*zoom;dw=dh*ar;} else{dw=rect.width*zoom;dh=dw/ar;} const x=(rect.width-dw)/2+panX,y=(rect.height-dh)/2+panY; ctx.drawImage(img,x,y,dw,dh); cropperState.drawX=x;cropperState.drawY=y;cropperState.drawW=dw;cropperState.drawH=dh; } cropperState.draw=draw; draw(); let drag=false,lx,ly; canvas.onpointerdown=e=>{drag=true;lx=e.clientX;ly=e.clientY;canvas.setPointerCapture(e.pointerId);}; canvas.onpointermove=e=>{if(!drag)return;cropperState.panX+=e.clientX-lx;cropperState.panY+=e.clientY-ly;lx=e.clientX;ly=e.clientY;draw();}; canvas.onpointerup=()=>drag=false; $('cropperZoom').oninput=e=>{cropperState.zoom=parseFloat(e.target.value);draw();}; }
 $('cropperSave').addEventListener('click',()=>{ if(!cropperState)return; const c=document.createElement('canvas'); const size=cropperState.isBanner?900:400,ratio=cropperState.isBanner?3:1; c.width=size;c.height=size/ratio; const ctx=c.getContext('2d'); const wrap=$('cropperWrap').getBoundingClientRect(),ov=$('cropperOverlay').getBoundingClientRect(); const sx=(ov.left-wrap.left-cropperState.drawX)/cropperState.drawW*cropperState.img.width; const sy=(ov.top-wrap.top-cropperState.drawY)/cropperState.drawH*cropperState.img.height; const sw=(ov.width/wrap.width)*(cropperState.img.width*wrap.width/cropperState.drawW); const sh=(ov.height/wrap.height)*(cropperState.img.height*wrap.height/cropperState.drawH); ctx.drawImage(cropperState.img,sx,sy,sw,sh,0,0,size,size/ratio); if(cropperState.onSave)cropperState.onSave(c.toDataURL('image/jpeg',.85)); closeModal('cropperModal'); cropperState=null; });
 
-// ==================== EDIT MODAL ====================
+// ==================== EDIT MODAL (name/username) ====================
 let editModalState=null;
 $('editDisplayNameBtn').addEventListener('click',()=>{ editModalState={field:'display_name'}; $('editModalTitle').textContent='Edit display name'; $('editModalLabel').textContent='Display name'; $('editModalInput').value=currentProfile.display_name; $('editModalInput').maxLength=30; $('editModalHint').textContent='This is how your name appears to other players.'; $('editModalError').classList.add('hidden'); openModal('editModal'); setTimeout(()=>$('editModalInput').focus(),100); });
-$('editUsernameBtn').addEventListener('click',()=>{ const ds=(Date.now()-new Date(currentProfile.last_username_change||0).getTime())/86400000; if(ds<7&&currentProfile.last_username_change){toast('Too soon',`You can change your username in ${Math.ceil(7-ds)} day(s).`,'error');return;} editModalState={field:'username'}; $('editModalTitle').textContent='Edit username'; $('editModalLabel').textContent='Username'; $('editModalInput').value=currentProfile.username; $('editModalInput').minLength=3; $('editModalInput').maxLength=20; $('editModalHint').textContent='Letters, numbers, underscores only. 3-20 chars.'; $('editModalError').classList.add('hidden'); openModal('editModal'); setTimeout(()=>$('editModalInput').focus(),100); });
-$('editModalSave').addEventListener('click',async()=>{ const v=$('editModalInput').value.trim(); if(!v){$('editModalError').textContent='Cannot be empty.';$('editModalError').classList.remove('hidden');return;} if(editModalState.field==='username'){ if(!/^[a-zA-Z0-9_]+$/.test(v)){$('editModalError').textContent='Invalid characters.';$('editModalError').classList.remove('hidden');return;} const{data:ex}=await supabase.from('profiles').select('id').eq('username',v.toLowerCase()).maybeSingle(); if(ex){$('editModalError').textContent='Username taken.';$('editModalError').classList.remove('hidden');return;} await updateProfile({username:v.toLowerCase(),last_username_change:new Date().toISOString()}); } else await updateProfile({[editModalState.field]:v}); closeModal('editModal'); renderProfile(currentProfile.id); updateUserChip(); toast('Saved',null,'success'); });
+$('editUsernameBtn').addEventListener('click',()=>{ const ds=(Date.now()-(currentProfile.last_username_change||0))/86400000; if(ds<7&&currentProfile.last_username_change){toast('Too soon',`You can change your username in ${Math.ceil(7-ds)} day(s).`,'error');return;} editModalState={field:'username'}; $('editModalTitle').textContent='Edit username'; $('editModalLabel').textContent='Username'; $('editModalInput').value=currentProfile.username; $('editModalInput').minLength=3; $('editModalInput').maxLength=20; $('editModalHint').textContent='Letters, numbers, underscores only. 3-20 chars.'; $('editModalError').classList.add('hidden'); openModal('editModal'); setTimeout(()=>$('editModalInput').focus(),100); });
+$('editModalSave').addEventListener('click',()=>{ const v=$('editModalInput').value.trim(); if(!v){$('editModalError').textContent='Cannot be empty.';$('editModalError').classList.remove('hidden');return;} if(editModalState.field==='username'){ if(!/^[a-zA-Z0-9_]+$/.test(v)){$('editModalError').textContent='Invalid characters.';$('editModalError').classList.remove('hidden');return;} if(Object.values(db.users).some(u=>u.username===v.toLowerCase()&&u.id!==currentProfile.id)){$('editModalError').textContent='Username taken.';$('editModalError').classList.remove('hidden');return;} currentProfile.username=v.toLowerCase(); currentProfile.last_username_change=Date.now(); } else currentProfile[editModalState.field]=v; saveDb(); closeModal('editModal'); renderProfile(currentProfile.id); updateUserChip(); toast('Saved',null,'success'); });
 
 // ==================== COUNTRY ====================
 $('editCountryBtn').addEventListener('click',()=>{renderCountryList();openModal('countryModal');});
-function renderCountryList(filter=''){ const list=$('countryList'); let html=`<div class="country-item${currentProfile.country===''?' selected':''}" data-code=""><span class="flag">🌐</span> Prefer not to say</div>`; COUNTRIES.forEach(c=>{ if(filter&&!c.name.toLowerCase().includes(filter.toLowerCase()))return; html+=`<div class="country-item${currentProfile.country===c.code?' selected':''}" data-code="${c.code}"><span class="flag">${c.flag}</span> ${c.name}</div>`; }); list.innerHTML=html; list.querySelectorAll('.country-item').forEach(i=>i.addEventListener('click',async()=>{ await updateProfile({country:i.dataset.code}); closeModal('countryModal'); updateUserChip(); renderProfile(currentProfile.id); toast('Country updated',null,'success'); })); }
+function renderCountryList(filter=''){ const list=$('countryList'); let html=`<div class="country-item${currentProfile.country===''?' selected':''}" data-code=""><span class="flag">🌐</span> Prefer not to say</div>`; COUNTRIES.forEach(c=>{ if(filter&&!c.name.toLowerCase().includes(filter.toLowerCase()))return; html+=`<div class="country-item${currentProfile.country===c.code?' selected':''}" data-code="${c.code}"><span class="flag">${c.flag}</span> ${c.name}</div>`; }); list.innerHTML=html; list.querySelectorAll('.country-item').forEach(i=>i.addEventListener('click',()=>{ currentProfile.country=i.dataset.code; saveDb(); closeModal('countryModal'); updateUserChip(); renderProfile(currentProfile.id); toast('Country updated',null,'success'); })); }
 $('countrySearchInput').addEventListener('input',e=>renderCountryList(e.target.value));
-
-// ==================== DMS ====================
-let currentDmPartner=null,dmChannel=null;
-function subscribeToDms(){ if(!currentUser)return; if(dmChannel)supabase.removeChannel(dmChannel); dmChannel=supabase.channel('dms-'+currentUser.id).on('postgres_changes',{event:'INSERT',schema:'public',table:'messages',filter:`recipient=eq.${currentUser.id}`},payload=>{ renderDmList(); if(currentDmPartner&&payload.new.sender===currentDmPartner)renderDmChat(currentDmPartner); toast('New message',null,'info'); }).subscribe(); }
-function openDmWith(id){ currentDmPartner=id; renderDmList(); renderDmChat(id); }
-async function renderDmList(){ if(isGuest||!currentUser){$('dmList').innerHTML='<div style="padding:24px;text-align:center;color:var(--ink-muted);font-size:13px;">Log in to use messages.</div>';return;} $('dmList').innerHTML='<div style="padding:24px;text-align:center;color:var(--ink-muted);font-size:13px;">Loading...</div>'; const{data:msgs}=await supabase.from('messages').select('*').or(`sender.eq.${currentUser.id},recipient.eq.${currentUser.id}`).order('created_at',{ascending:false}); const partners=new Map(); (msgs||[]).forEach(m=>{const pid=m.sender===currentUser.id?m.recipient:m.sender; if(!partners.has(pid))partners.set(pid,m);}); const items=[]; for(const[pid,last]of partners){const p=await fetchProfile(pid); if(p)items.push({profile:p,last});} const list=$('dmList'); if(!items.length){list.innerHTML='<div style="padding:30px;text-align:center;color:var(--ink-muted);font-size:13px;">No conversations yet.</div>';return;} list.innerHTML=items.map(({profile:p,last})=>{ const unread=last.sender!==currentUser.id&&!last.read; const active=currentDmPartner===p.id; const prev=escapeHtml(last.text).slice(0,40)+(last.text.length>40?'...':''); return `<div class="dm-item${unread?' unread':''}${active?' active':''}" data-user-id="${p.id}"><div class="avatar" data-avatar-url="${p.avatar_url||''}" data-avatar-name="${escapeHtml(p.display_name)}"><span class="online-indicator"></span></div><div class="dm-item-info"><div class="dm-item-name">${escapeHtml(p.display_name)}<span class="time">${formatDate(last.created_at)}</span></div><div class="dm-item-preview">${last.sender===currentUser.id?'You: ':''}${prev}</div></div></div>`; }).join(''); list.querySelectorAll('.avatar[data-avatar-url]').forEach(el=>renderAvatarFromData(el)); list.querySelectorAll('.dm-item').forEach(i=>i.addEventListener('click',()=>openDmWith(i.dataset.userId))); }
-async function renderDmChat(userId){ const user=await fetchProfile(userId); if(!user)return; $('dmChatHeader').innerHTML=`<div class="dm-chat-user" id="dmHeaderUser" data-user-id="${userId}"><div class="avatar" data-avatar-url="${user.avatar_url||''}" data-avatar-name="${escapeHtml(user.display_name)}"></div><div class="dm-chat-user-info"><div class="dm-chat-user-name">${escapeHtml(user.display_name)}</div><div class="dm-chat-user-status"><span class="online-dot"></span> Online</div></div></div><div class="dm-chat-actions"><button class="icon-btn" id="dmMoreBtn"><i data-lucide="more-horizontal"></i></button></div>`; const av=$('dmChatHeader').querySelector('.avatar'); if(av)renderAvatarFromData(av); refreshIcons(); const{data:msgs}=await supabase.from('messages').select('*').or(`and(sender.eq.${currentUser.id},recipient.eq.${userId}),and(sender.eq.${userId},recipient.eq.${currentUser.id})`).order('created_at',{ascending:true}); const me=$('dmMessages'); if(!msgs||!msgs.length){ me.innerHTML='<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--ink-muted);text-align:center;gap:8px;"><i data-lucide="message-square" style="width:32px;height:32px;opacity:.5;"></i><div style="font-size:14px;">No messages yet</div><div style="font-size:12px;">Say hello to start</div></div>'; } else { let html=''; msgs.forEach(m=>{ const isSelf=m.sender===currentUser.id; html+=`<div class="dm-msg ${isSelf?'self':'other'}"><div class="dm-msg-bubble">${escapeHtml(m.text)}</div><div class="dm-msg-time">${new Date(m.created_at).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}</div></div>`; }); me.innerHTML=html; } refreshIcons(); me.scrollTop=me.scrollHeight; supabase.from('messages').update({read:true}).eq('sender',userId).eq('recipient',currentUser.id).eq('read',false).then(()=>renderDmList()); $('dmHeaderUser')?.addEventListener('click',()=>{showPage('profile');renderProfile(userId);}); $('dmMoreBtn')?.addEventListener('click',e=>showContextMenu(e.currentTarget,buildUserContextMenu(userId))); }
-$('newDmBtn').addEventListener('click',async()=>{ const un=await showPrompt({title:'New message',label:'Username',placeholder:'Enter username...'}); if(!un)return; const{data:user}=await supabase.from('profiles').select('*').eq('username',un.trim().toLowerCase()).maybeSingle(); if(!user){toast('User not found',null,'error');return;} openDmWith(user.id); renderDmList(); });
-$('dmSend').addEventListener('click',async()=>{ if(!currentDmPartner||isGuest||!currentUser)return; const t=$('dmInput').value.trim(); if(!t)return; const{error}=await supabase.from('messages').insert({sender:currentUser.id,recipient:currentDmPartner,text:t}); if(error){toast('Send failed',error.message,'error');return;} $('dmInput').value=''; renderDmChat(currentDmPartner); });
-$('dmInput').addEventListener('keydown',e=>{ if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();$('dmSend').click();} });
+function renderSettingsVisibility(){ if(currentProfile){ const c=getCountry(currentProfile.country); $('countryDesc').textContent=c?`${c.flag} ${c.name}`:'Not set'; const ds=(Date.now()-(currentProfile.last_username_change||0))/86400000; $('usernameChangeDesc').textContent=ds<7&&currentProfile.last_username_change?`Can change in ${Math.ceil(7-ds)} day(s)`:'Can be changed once per week'; } }
 
 // ==================== SETTINGS TOGGLES ====================
 document.querySelectorAll('.toggle[data-setting]').forEach(t=>{ t.classList.toggle('active',!!settings[t.dataset.setting]); t.addEventListener('click',()=>{ settings[t.dataset.setting]=!settings[t.dataset.setting]; t.classList.toggle('active',settings[t.dataset.setting]); saveSettings(); haptic(8); if(t.dataset.setting==='showFlag')updateUserChip(); }); });
+
+// ==================== DMS ====================
+let currentDmPartner=null;
+function getDmKey(a,b){ return [a,b].sort().join('|'); }
+function openDmWith(id){ if(isGuest){toast('Log in required','Create an account to send messages.','info');return;} currentDmPartner=id; renderDmList(); renderDmChat(id); }
+function renderDmList(){ const list=$('dmList'); if(isGuest||!currentProfile){list.innerHTML='<div style="padding:24px;text-align:center;color:var(--ink-muted);font-size:13px;">Log in to use messages.</div>';return;} const me=currentProfile.id; const partners=new Map(); Object.entries(db.messages).forEach(([key,msgs])=>{ const[a,b]=key.split('|'); if(a!==me&&b!==me)return; const other=a===me?b:a; const last=msgs[msgs.length-1]; if(!last)return; if(!partners.has(other)||last.created_at>partners.get(other).created_at)partners.set(other,last); }); if(!partners.size){list.innerHTML='<div style="padding:30px;text-align:center;color:var(--ink-muted);font-size:13px;">No conversations yet.<br>Visit a profile to message someone.</div>';return;} let html=''; [...partners.entries()].sort((x,y)=>y[1].created_at-x[1].created_at).forEach(([pid,last])=>{ const p=db.users[pid]; if(!p)return; const unread=last.sender!==me&&!last.read; const preview=escapeHtml(last.text).slice(0,40)+(last.text.length>40?'...':''); html+=`<div class="dm-item${unread?' unread':''}${currentDmPartner===pid?' active':''}" data-user-id="${pid}"><div class="avatar" data-avatar-url="${p.avatar_url||''}" data-avatar-name="${escapeHtml(p.display_name)}"><span class="online-indicator"></span></div><div class="dm-item-info"><div class="dm-item-name">${escapeHtml(p.display_name)}<span class="time">${formatDate(last.created_at)}</span></div><div class="dm-item-preview">${last.sender===me?'You: ':''}${preview}</div></div></div>`; }); list.innerHTML=html; list.querySelectorAll('.avatar[data-avatar-url]').forEach(el=>renderAvatarFromData(el)); list.querySelectorAll('.dm-item').forEach(i=>i.addEventListener('click',()=>openDmWith(i.dataset.userId))); updateDmBadge(); }
+function updateDmBadge(){ if(!currentProfile){$('dmBadge').classList.add('hidden');return;} const me=currentProfile.id; let unread=0; Object.entries(db.messages).forEach(([key,msgs])=>{ const[a,b]=key.split('|'); if(a===me||b===me)msgs.forEach(m=>{if(m.sender!==me&&!m.read)unread++;}); }); if(unread>0){$('dmBadge').textContent=unread;$('dmBadge').classList.remove('hidden');} else $('dmBadge').classList.add('hidden'); }
+function renderDmChat(userId){ const user=db.users[userId]; if(!user)return; $('dmChatHeader').innerHTML=`<div class="dm-chat-user" id="dmHeaderUser" data-user-id="${userId}"><div class="avatar" data-avatar-url="${user.avatar_url||''}" data-avatar-name="${escapeHtml(user.display_name)}"></div><div class="dm-chat-user-info"><div class="dm-chat-user-name">${escapeHtml(user.display_name)}</div><div class="dm-chat-user-status"><span class="online-dot"></span> Online</div></div></div><div class="dm-chat-actions"><button class="icon-btn" id="dmMoreBtn"><i data-lucide="more-horizontal"></i></button></div>`; const av=$('dmChatHeader').querySelector('.avatar'); if(av)renderAvatarFromData(av); refreshIcons(); const key=getDmKey(currentProfile.id,userId); const msgs=db.messages[key]||[]; msgs.forEach(m=>{if(m.sender!==currentProfile.id)m.read=true;}); db.messages[key]=msgs; saveDb(); updateDmBadge(); const me=$('dmMessages'); if(!msgs.length){ me.innerHTML='<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--ink-muted);text-align:center;gap:8px;"><i data-lucide="message-square" style="width:32px;height:32px;opacity:.5;"></i><div style="font-size:14px;">No messages yet</div><div style="font-size:12px;">Say hello to start</div></div>'; } else { let html=''; msgs.forEach(m=>{ const isSelf=m.sender===currentProfile.id; html+=`<div class="dm-msg ${isSelf?'self':'other'}"><div class="dm-msg-bubble">${escapeHtml(m.text)}</div><div class="dm-msg-time">${new Date(m.created_at).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}</div></div>`; }); me.innerHTML=html; } refreshIcons(); me.scrollTop=me.scrollHeight; $('dmHeaderUser')?.addEventListener('click',()=>{showPage('profile');renderProfile(userId);}); $('dmMoreBtn')?.addEventListener('click',e=>showContextMenu(e.currentTarget,buildUserContextMenu(userId))); }
+$('newDmBtn').addEventListener('click',async()=>{ if(isGuest){toast('Log in required','Create an account to send messages.','info');return;} const un=await showPrompt({title:'New message',label:'Username',placeholder:'Enter username...'}); if(!un)return; const user=Object.values(db.users).find(u=>u.username===un.trim().toLowerCase()); if(!user){toast('User not found',null,'error');return;} openDmWith(user.id); renderDmList(); });
+$('dmSend').addEventListener('click',()=>{ if(!currentDmPartner||isGuest||!currentProfile)return; const t=$('dmInput').value.trim(); if(!t)return; const key=getDmKey(currentProfile.id,currentDmPartner); if(!db.messages[key])db.messages[key]=[]; db.messages[key].push({id:'m_'+Date.now(),sender:currentProfile.id,recipient:currentDmPartner,text:t,read:false,created_at:Date.now()}); saveDb(); $('dmInput').value=''; renderDmChat(currentDmPartner); renderDmList(); });
+$('dmInput').addEventListener('keydown',e=>{ if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();$('dmSend').click();} });
 
 // ==================== CONTEXT MENU ====================
 function buildUserContextMenu(userId){ const items=[]; const isSelf=currentProfile&&currentProfile.id===userId; items.push({icon:'user',label:'View profile',action:()=>{showPage('profile');renderProfile(userId);}}); if(!isSelf&&!isGuest&&currentProfile){ items.push({icon:'message-square',label:'Send message',action:()=>{openDmWith(userId);showPage('dms');}}); items.push({divider:true}); items.push({icon:'flag',label:'Report user',danger:true,action:()=>openReport(userId)}); items.push({icon:'ban',label:'Block user',danger:true,action:()=>blockUser(userId)}); } return items; }
@@ -918,25 +1100,38 @@ function showContextMenuAt(x,y,items){ const menu=$('contextMenu'); menu.innerHT
 function hideContextMenu(){ $('contextMenu').classList.add('hidden'); }
 
 // ==================== REPORT / BLOCK ====================
-function openReport(userId){ $('reportTarget').textContent='this user'; $('reportReason').value=''; $('reportDetails').value=''; openModal('reportModal'); }
-$('reportSubmit').addEventListener('click',async()=>{ if(!$('reportReason').value){toast('Select a reason',null,'error');return;} if(currentUser)await supabase.from('reports').insert({reporter:currentUser.id,reason:$('reportReason').value,details:$('reportDetails').value}); closeModal('reportModal'); toast('Report submitted','Our team will review it.','success'); });
-async function blockUser(userId){ if(isGuest){toast('Guests cannot block','Create an account to block users.','error');return;} const{error}=await supabase.from('blocks').insert({blocker:currentUser.id,blocked:userId}); if(error&&!error.message.includes('duplicate'))toast('Error',error.message,'error'); else toast('User blocked','They can no longer message you.','success'); }
+function openReport(userId){ if(isGuest){toast('Log in required','Create an account to report users.','info');return;} const u=db.users[userId]; $('reportTarget').textContent=u?u.display_name:'this user'; $('reportReason').value=''; $('reportDetails').value=''; openModal('reportModal'); }
+$('reportSubmit').addEventListener('click',()=>{ if(!$('reportReason').value){toast('Select a reason',null,'error');return;} closeModal('reportModal'); toast('Report submitted','Our team will review it.','success'); });
+function blockUser(userId){ if(isGuest){toast('Guests cannot block','Create an account to block users.','info');return;} toast('User blocked','They can no longer message you.','success'); }
 
 // ==================== MATCHMAKING ====================
 let queueTimer=null,queueStart=0,pendingOpponent=null,pendingPlayerSide='sente';
-$('findMatchBtn').addEventListener('click',()=>startMatchmaking(false));
-$('botMatchBtn').addEventListener('click',()=>startMatchmaking(true));
 $('cancelQueueBtn').addEventListener('click',cancelQueue);
 $('skipToBotBtn').addEventListener('click',()=>{ clearInterval(queueTimer); showLoading(findBotOpponent()); });
-
-async function startMatchmaking(botOnly){ if(isGuest&&!botOnly){botOnly=true;toast('Guest mode','Guests can only play bots. Create an account to play real players.','info');} showView('queueView'); $('queueYourElo').textContent=currentProfile?currentProfile.elo:'—'; $('queueMode').textContent=botOnly?'Bot':cap(selectedMode); $('queueStatus').textContent=botOnly?'Setting up bot match...':'Searching for real players of similar skill...'; queueStart=Date.now(); if(botOnly){setTimeout(()=>{clearInterval(queueTimer);showLoading(findBotOpponent());},1500);return;} let matched=false; queueTimer=setInterval(async()=>{ const el=(Date.now()-queueStart)/1000; $('queueTime').textContent=formatTime(Math.floor(el)); if(el>3)$('queueStatus').textContent='Still searching... You can skip to a bot match.'; if(!matched&&el>2){ try{ const{data}=await supabase.functions.invoke('matchmake',{body:{mode:selectedMode}}); if(data?.matched&&data.match){ matched=true;clearInterval(queueTimer); const op=await fetchProfile(data.match.black); showLoading({...op,isBot:false,matchId:data.match.id}); return; } }catch(e){} } if(el>10){clearInterval(queueTimer);showLoading(findBotOpponent());} },2000); }
+function startMatchmaking(botOnly){
+  if(isGuest&&!botOnly){botOnly=true;toast('Guest mode','Guests play bots. Create an account to play real players.','info');}
+  showView('queueView');
+  $('queueYourElo').textContent=currentProfile?currentProfile.elo:'—';
+  $('queueMode').textContent=botOnly?'Bot':cap(selectedMode);
+  $('queueStatus').textContent=botOnly?'Setting up bot match...':'Searching for real players of similar skill...';
+  queueStart=Date.now();
+  if(botOnly){setTimeout(()=>{clearInterval(queueTimer);showLoading(findBotOpponent());},1500);return;}
+  let matched=false;
+  queueTimer=setInterval(()=>{
+    const el=(Date.now()-queueStart)/1000;
+    $('queueTime').textContent=formatTime(Math.floor(el));
+    if(el>3)$('queueStatus').textContent='Still searching... You can skip to a bot match.';
+    if(!matched&&el>4){ matched=true; clearInterval(queueTimer); showLoading(findRealOpponent()); }
+  },1000);
+}
 function cancelQueue(){ clearInterval(queueTimer); showView('homeView'); }
-function findBotOpponent(){ const myElo=currentProfile?currentProfile.elo:1000; const myW=currentProfile?currentProfile.wins:0,myL=currentProfile?currentProfile.losses:0; return{id:'bot_'+Date.now(),display_name:'Engine',username:'engine',elo:myElo+Math.floor(Math.random()*101)-50,isBot:true,avatar_url:null,wins:myW,losses:myL,games:myW+myL,level:currentProfile?currentProfile.level:1,country:null,show_flag:false}; }
+function findBotOpponent(){ const myElo=currentProfile?currentProfile.elo:1000; const myW=currentProfile?currentProfile.wins:0,myL=currentProfile?currentProfile.losses:0; return{id:'bot_'+Date.now(),display_name:'Engine',username:'engine',elo:myElo+Math.floor(Math.random()*101)-50,is_bot:true,avatar_url:null,wins:myW,losses:myL,games:myW+myL,level:currentProfile?currentProfile.level:1,country:null,show_flag:false}; }
+function findRealOpponent(){ const myElo=currentProfile.elo; const myRatio=wlRatio(currentProfile); let cand=Object.values(db.users).filter(u=>!u.is_bot&&u.id!==currentProfile.id); let near=cand.filter(u=>Math.abs(u.elo-myElo)<=150); if(!near.length)near=cand; near.sort((a,b)=>Math.abs(wlRatio(a)-myRatio)-Math.abs(wlRatio(b)-myRatio)); const pick=near[Math.floor(Math.random()*Math.min(5,near.length))]; return{...pick,is_bot:false}; }
 const loadingTips=['Control the center early with pawns.','Drops are shogi\'s secret weapon — captured pieces can turn a game around.','The rook and bishop are your strongest pieces. Keep them active.','A promoted pawn is as strong as a gold general.','Never leave your king undefended.','Watch for nifu — two unpromoted pawns on the same file is illegal.'];
 function showLoading(opponent){ pendingOpponent=opponent; showView('loadingView'); renderAvatar($('loadingYouAvatar'),isGuest?null:currentProfile); renderAvatar($('loadingOppAvatar'),opponent); $('loadingYouName').textContent=isGuest?'Guest':(currentProfile?.display_name||'You'); $('loadingYouElo').textContent=currentProfile?currentProfile.elo:'—'; $('loadingOppName').textContent=opponent.display_name; $('loadingOppElo').textContent=opponent.elo; $('loadingTitle').textContent='Match found'; $('loadingSubtitle').textContent='Flipping for first move...'; $('loadingTip').textContent=loadingTips[Math.floor(Math.random()*loadingTips.length)]; refreshIcons(); setTimeout(openCoinFlip,2500); }
 
 // ==================== COIN FLIP ====================
-function openCoinFlip(){ const coin=$('coin'); coin.style.transition='none'; coin.style.transform='rotateY(0deg)'; $('coinChoices').classList.remove('hidden'); $('coinResult').classList.add('hidden'); $('coinContinue').classList.add('hidden'); $('coinPickInfo').textContent=''; openModal('coinModal'); }
+function openCoinFlip(){ const coin=$('coin'); coin.style.transition='none'; coin.style.transform='rotateY(0deg)'; $('coinChoices').classList.remove('hidden'); $('coinResult').classList.add('hidden'); $('coinContinue').classList.add('hidden'); $('coinPickInfo').textContent=''; refreshIcons(); openModal('coinModal'); }
 document.querySelectorAll('.coin-btn').forEach(btn=>btn.addEventListener('click',()=>{ const pick=btn.dataset.pick; const oppPick=pick==='heads'?'tails':'heads'; $('coinChoices').classList.add('hidden'); $('coinPickInfo').innerHTML=`You picked <b>${cap(pick)}</b> · Opponent picked <b>${cap(oppPick)}</b>`; const result=Math.random()<0.5?'heads':'tails'; const finalDeg=5*360+(result==='tails'?180:0); requestAnimationFrame(()=>{ const coin=$('coin'); coin.style.transition='transform 2.2s cubic-bezier(.15,.85,.25,1)'; coin.style.transform=`rotateY(${finalDeg}deg)`; }); setTimeout(()=>{ const won=pick===result; pendingPlayerSide=won?'sente':'gote'; const res=$('coinResult'); res.className='coin-result '+(won?'win':'lose'); res.textContent=won?`It's ${cap(result)}! You go first as Sente.`:`It's ${cap(result)}! Opponent goes first.`; res.classList.remove('hidden'); $('coinContinue').classList.remove('hidden'); },2300); }));
 $('coinContinue').addEventListener('click',()=>{ closeModal('coinModal'); startGame(pendingOpponent,pendingPlayerSide); });
 
@@ -946,42 +1141,37 @@ const VALUES={pawn:100,lance:300,knight:300,silver:500,gold:600,bishop:900,rook:
 const HAND_ORDER=['rook','bishop','gold','silver','knight','lance','pawn'];
 let game=null;
 
-async function startGame(opponent,playerSide){ showView('gameView'); game={ board:Array.from({length:9},()=>Array(9).fill(null)), captured:{sente:{},gote:{}}, turn:'sente', selected:null, legalMoves:[], history:[], moveStack:[], pieceId:0, gameOver:false, thinking:false, lastMove:null, positionHistory:[], pendingPromotion:null, opponent, mode:selectedMode, chat:[], justDroppedId:null, dragState:null, playerSide, isElo:selectedMode==='ranked', hasClock:selectedMode==='ranked'||selectedMode==='bullet', clockSeconds:selectedMode==='ranked'?600:180, clock:{sente:0,gote:0}, clockInterval:null, canAssist:selectedMode!=='ranked'&&opponent.isBot };
+function startGame(opponent,playerSide){
+  showView('gameView');
+  game={board:Array.from({length:9},()=>Array(9).fill(null)),captured:{sente:{},gote:{}},turn:'sente',selected:null,legalMoves:[],history:[],moveStack:[],pieceId:0,gameOver:false,thinking:false,lastMove:null,positionHistory:[],pendingPromotion:null,opponent,mode:selectedMode,chat:[],justDroppedId:null,dragState:null,playerSide,isElo:selectedMode==='ranked',hasClock:selectedMode==='ranked'||selectedMode==='bullet',clockSeconds:selectedMode==='ranked'?600:180,clock:{sente:0,gote:0},clockInterval:null,canAssist:selectedMode!=='ranked'&&opponent.is_bot};
   game.clock={sente:game.clockSeconds,gote:game.clockSeconds};
   initGameBoard();
-  // Mode badge
   const mb=$('gameModeBadge'); const modeIcon={ranked:'trophy',casual:'gamepad-2',bullet:'zap'}[selectedMode]; mb.className='game-mode-badge '+selectedMode; mb.innerHTML=`<i data-lucide="${modeIcon}"></i> ${cap(selectedMode)}`;
-  // Assist buttons
   $('gameHintBtn').disabled=!game.canAssist; $('gameUndoBtn').disabled=!game.canAssist;
-  // Clocks
   $('youClock').classList.toggle('hidden',!game.hasClock); $('oppClock').classList.toggle('hidden',!game.hasClock);
-  // Player bars
-  renderPlayerBar('you',isGuest?null:currentProfile,playerSide);
-  renderPlayerBar('opp',opponent,opp(playerSide));
+  renderPlayerBar('you',isGuest?null:currentProfile);
+  renderPlayerBar('opp',opponent);
   refreshIcons();
-  // Chat
   document.querySelectorAll('.game-chat-tab').forEach(t=>t.onclick=()=>{ document.querySelectorAll('.game-chat-tab').forEach(x=>x.classList.remove('active')); t.classList.add('active'); const tab=t.dataset.gameTab; $('gameChatBody').classList.toggle('hidden',tab!=='chat'); $('gameMovesList').classList.toggle('hidden',tab!=='moves'); $('gameChatInputWrap').classList.toggle('hidden',tab!=='chat'); });
-  if(isGuest||opponent.isBot){ $('gameChatInputWrap').classList.add('hidden'); $('gameChatBody').innerHTML='<div style="flex:1;display:flex;align-items:center;justify-content:center;color:var(--ink-muted);font-size:12px;text-align:center;padding:20px;">'+(isGuest?'Log in to chat.':'Chat is available in matches against real players.')+'</div>'; } else renderGameChat();
-  setGameStatus(turn===playerSide?'Your turn':'Opponent\'s turn');
+  if(isGuest||opponent.is_bot){ $('gameChatInputWrap').classList.add('hidden'); $('gameChatBody').innerHTML='<div style="flex:1;display:flex;align-items:center;justify-content:center;color:var(--ink-muted);font-size:12px;text-align:center;padding:20px;">'+(isGuest?'Log in to chat.':'Chat is available in matches against real players.')+'</div>'; } else renderGameChat();
+  setGameStatus(game.turn===playerSide?'Your turn':'Opponent\'s turn');
   renderGame();
-  addGameChatMessage(null,'Match started — '+ (playerSide==='sente'?'you play Sente (first)':'opponent plays Sente (first)'),'system');
+  addGameChatMessage(null,'Match started — '+(playerSide==='sente'?'you play Sente (first)':'opponent plays Sente (first)'),'system');
   if(game.hasClock)startClocks();
   if(game.turn!==playerSide)botMove();
 }
-
-async function renderPlayerBar(which,profile,side){ const isYou=which==='you'; const nameEl=$(isYou?'youName':'opponentName'); const flagEl=$(isYou?'youFlag':'oppFlag'); const statsEl=$(isYou?'youStats':'oppStats'); const avatarEl=$(isYou?'youAvatar':'opponentAvatar');
-  if(!profile){ nameEl.textContent='Guest'; flagEl.textContent=''; statsEl.innerHTML=''; renderAvatar(avatarEl,null); return; }
+function renderPlayerBar(which,profile){
+  const isYou=which==='you';
+  const nameEl=$(isYou?'youName':'opponentName'); const flagEl=$(isYou?'youFlag':'oppFlag'); const statsEl=$(isYou?'youStats':'oppStats'); const avatarEl=$(isYou?'youAvatar':'opponentAvatar'); const infoEl=$(isYou?'youInfo':'oppInfo');
+  if(!profile){ nameEl.textContent='Guest'; flagEl.innerHTML=''; statsEl.innerHTML=''; renderAvatar(avatarEl,null); infoEl.onclick=null; return; }
   renderAvatar(avatarEl,profile);
   nameEl.textContent=profile.display_name;
   flagEl.innerHTML=(settings.showFlag&&profile.show_flag&&profile.country)?`<span class="flag">${getCountryFlag(profile.country)}</span>`:'';
   let stats=`<span class="pstat"><i data-lucide="zap"></i><b>${profile.elo}</b></span>`;
-  if(!profile.isBot){ const rate=profile.games>0?Math.round(profile.wins/profile.games*100):0; stats+=`<span class="pstat"><i data-lucide="trophy"></i><b>${profile.wins}W</b></span><span class="pstat"><b>${profile.losses}L</b></span><span class="pstat"><i data-lucide="star"></i><b>Lv ${profile.level}</b></span>`; if(isYou&&currentProfile){ const rank=await getLeaderboardRank(currentProfile.elo); stats+=`<span class="pstat"><i data-lucide="hash"></i><b>#${rank}</b></span>`; } }
+  if(!profile.is_bot){ stats+=`<span class="pstat"><i data-lucide="trophy"></i><b>${profile.wins}W</b></span><span class="pstat"><b>${profile.losses}L</b></span><span class="pstat"><i data-lucide="star"></i><b>Lv ${profile.level}</b></span>`; if(isYou)stats+=`<span class="pstat"><i data-lucide="hash"></i><b>#${getRank(profile.elo)}</b></span>`; }
   statsEl.innerHTML=stats; refreshIcons();
-  // Click handlers
-  const infoEl=$(isYou?'youInfo':'oppInfo');
-  infoEl.onclick=()=>{ if(!isYou&&!profile.isBot)showContextMenu(infoEl,buildUserContextMenu(profile.id)); else if(isYou&&currentProfile)showContextMenu(infoEl,buildUserContextMenu(currentProfile.id)); };
+  infoEl.onclick=()=>{ if(!isYou&&!profile.is_bot)showContextMenu(infoEl,buildUserContextMenu(profile.id)); else if(isYou&&currentProfile)showContextMenu(infoEl,buildUserContextMenu(currentProfile.id)); };
 }
-
 function initGameBoard(){ const g=game,back=['lance','knight','silver','gold','king','gold','silver','knight','lance']; for(let c=0;c<9;c++){ g.board[0][c]={type:back[c],owner:'gote',promoted:false,id:++g.pieceId}; g.board[2][c]={type:'pawn',owner:'gote',promoted:false,id:++g.pieceId}; g.board[6][c]={type:'pawn',owner:'sente',promoted:false,id:++g.pieceId}; g.board[8][c]={type:back[c],owner:'sente',promoted:false,id:++g.pieceId}; } g.board[1][1]={type:'bishop',owner:'gote',promoted:false,id:++g.pieceId}; g.board[1][7]={type:'rook',owner:'gote',promoted:false,id:++g.pieceId}; g.board[7][7]={type:'bishop',owner:'sente',promoted:false,id:++g.pieceId}; g.board[7][1]={type:'rook',owner:'sente',promoted:false,id:++g.pieceId}; g.positionHistory=[getGameBoardHash(g.board)]; }
 function getGameBoardHash(brd){let h='';for(let r=0;r<9;r++)for(let c=0;c<9;c++){const p=brd[r][c];h+=p?(p.owner[0]+p.type[0]+(p.promoted?'P':'')):'.';}return h;}
 const inBounds=(r,c)=>r>=0&&r<9&&c>=0&&c<9;
@@ -1002,27 +1192,18 @@ function isStalemate(owner,brd,cap){if(inCheck(owner,brd))return false;return ge
 function evaluate(brd,cap){let s=0;for(let r=0;r<9;r++)for(let c=0;c<9;c++){const p=brd[r][c];if(!p)continue;let v=p.type==='king'?100000:VALUES[p.type];if(p.promoted){if(p.type==='rook')v=1300;else if(p.type==='bishop')v=1100;else v=VALUES.gold;}s+=(p.owner==='sente'?1:-1)*v;}for(const t in cap.sente)s+=cap.sente[t]*VALUES[t];for(const t in cap.gote)s-=cap.gote[t]*VALUES[t];return s;}
 function search(brd,cap,depth,alpha,beta,max,posHist){const owner=max?'sente':'gote';const moves=getAllMoves(owner,brd,cap);if(depth===0||moves.length===0){if(moves.length===0){if(inCheck(owner,brd))return max?-99999+(4-depth):99999-(4-depth);return 0;}return evaluate(brd,cap);}moves.sort((a,b)=>{const av=brd[a.toR]?.[a.toC]?VALUES[brd[a.toR][a.toC].type]||0:0;const bv=brd[b.toR]?.[b.toC]?VALUES[brd[b.toR][b.toC].type]||0:0;return bv-av;});let best=max?-Infinity:Infinity;for(const move of moves){const{board:nb,captured:nc}=applyFull(brd,cap,move);const hash=getGameBoardHash(nb);const reps=posHist.filter(h=>h===hash).length;let val=search(nb,nc,depth-1,alpha,beta,!max,[...posHist,hash]);if(reps>=2)val+=max?-800:800;if(max){if(val>best)best=val;if(val>alpha)alpha=val;}else{if(val<best)best=val;if(val<beta)beta=val;}if(beta<=alpha)break;}return best;}
 function moveToString(move){const cols='987654321',rows='abcdefghi';if(move.drop)return GLYPHS[move.type].normal+'*'+cols[move.toC]+rows[move.toR];const glyph=move.promote?GLYPHS[move.pieceType].promoted:GLYPHS[move.pieceType].normal;return glyph+cols[move.toC]+rows[move.toR];}
-
-function botMove(){ if(!game||game.gameOver)return; game.thinking=true; setGameStatus('Opponent thinking...','thinking'); setTimeout(()=>{ if(!game||game.gameOver)return; const botOwner=oppSide(game.playerSide); const moves=getAllMoves(botOwner,game.board,game.captured); if(moves.length===0){game.thinking=false;endGame(game.playerSide==='sente'?'win':'win','Checkmate! You win!');return;} const scored=moves.map(move=>{const piece=game.board[move.fromR]?.[move.fromC];const am={...move,pieceType:piece?.type||move.type};const{board:nb,captured:nc}=applyFull(game.board,game.captured,am);const hash=getGameBoardHash(nb);return{move:am,score:search(nb,nc,2,-Infinity,Infinity,game.playerSide==='sente',[...game.positionHistory,hash])};}); scored.sort((a,b)=>game.playerSide==='sente'?a.score-b.score:b.score-a.score); const pool=scored.filter(s=>s.score<=(game.playerSide==='sente'?scored[0]:scored[0]).score+25); const fresh=pool.filter(s=>{const{board:nb}=applyFull(game.board,game.captured,s.move);return game.positionHistory.filter(h=>h===getGameBoardHash(nb)).length<2;}); const use=fresh.length?fresh:pool; const pick=use[Math.floor(Math.random()*Math.min(3,use.length))]; if(!pick.move.drop&&pick.move.promote===undefined){const piece=game.board[pick.move.fromR][pick.move.fromC];pick.move.promote=mustPromote(piece,pick.move.toR)||canPromote(piece,pick.move.fromR,pick.move.toR);} game.thinking=false; executeMove(pick.move,true); },400+Math.random()*600); }
-
+function botMove(){ if(!game||game.gameOver)return; game.thinking=true; setGameStatus('Opponent thinking...','thinking'); setTimeout(()=>{ if(!game||game.gameOver)return; const botOwner=oppSide(game.playerSide); const moves=getAllMoves(botOwner,game.board,game.captured); if(moves.length===0){game.thinking=false;endGame('win','Checkmate! You win!');return;} const scored=moves.map(move=>{const piece=game.board[move.fromR]?.[move.fromC];const am={...move,pieceType:piece?.type||move.type};const{board:nb,captured:nc}=applyFull(game.board,game.captured,am);const hash=getGameBoardHash(nb);return{move:am,score:search(nb,nc,2,-Infinity,Infinity,game.playerSide==='sente',[...game.positionHistory,hash])};}); scored.sort((a,b)=>game.playerSide==='sente'?a.score-b.score:b.score-a.score); const top=scored.slice(0,3); const fresh=top.filter(s=>{const{board:nb}=applyFull(game.board,game.captured,s.move);return game.positionHistory.filter(h=>h===getGameBoardHash(nb)).length<2;}); const use=fresh.length?fresh:top; const pick=use[Math.floor(Math.random()*use.length)]; if(!pick.move.drop&&pick.move.promote===undefined){const piece=game.board[pick.move.fromR][pick.move.fromC];pick.move.promote=mustPromote(piece,pick.move.toR)||canPromote(piece,pick.move.fromR,pick.move.toR);} game.thinking=false; executeMove(pick.move,true); },400+Math.random()*600); }
 function executeMove(move,isBot){ if(!game)return; if(!move.drop&&!move.pieceType){const piece=game.board[move.fromR]?.[move.fromC];if(piece)move.pieceType=piece.type;} if(move.drop)move.promote=false; else if(move.promote===undefined){const piece=game.board[move.fromR][move.fromC];const cp=canPromote(piece,move.fromR,move.toR);const mp=mustPromote(piece,move.toR);if(mp)move.promote=true;else if(cp&&!isBot){game.pendingPromotion={move};showPromoModalGame(piece);return;}else move.promote=cp;} game.moveStack.push({board:game.board.map(r=>r.map(p=>p?{...p}:null)),captured:{sente:{...game.captured.sente},gote:{...game.captured.gote}},turn:game.turn,lastMove:game.lastMove,positionHistory:[...game.positionHistory],history:[...game.history]}); if(!move.drop&&game.board[move.toR][move.toC]){game.captured[move.owner][game.board[move.toR][move.toC].type]=(game.captured[move.owner][game.board[move.toR][move.toC].type]||0)+1;} if(!move.drop)animateMove(move); setTimeout(()=>{ if(!game)return; if(move.drop){const np={type:move.type,owner:move.owner,promoted:false,id:++game.pieceId};game.board[move.toR][move.toC]=np;game.captured[move.owner][move.type]=Math.max(0,(game.captured[move.owner][move.type]||0)-1);game.justDroppedId=np.id;}else{const piece=game.board[move.fromR][move.fromC];if(move.promote)piece.promoted=true;game.board[move.toR][move.toC]=piece;game.board[move.fromR][move.fromC]=null;} game.lastMove=move; game.positionHistory.push(getGameBoardHash(game.board)); finalizeMove(move); },move.drop?0:280); }
 function finalizeMove(move){ game.history.push(move); game.turn=oppSide(game.turn); game.selected=null; game.legalMoves=[]; renderGame(); updateClockDisplay(); if(isMate(game.turn,game.board,game.captured)){ const playerWon=game.turn!==game.playerSide; endGame(playerWon?'win':'loss',playerWon?'Checkmate! You win!':'Checkmate! Opponent wins.'); return; } if(isStalemate(game.turn,game.board,game.captured)){endGame('draw','Stalemate — draw.');return;} const reps=game.positionHistory.filter(h=>h===getGameBoardHash(game.board)).length; if(reps>=4){endGame('draw','Draw by repetition.');return;} const check=inCheck(game.turn,game.board); if(game.turn===game.playerSide)setGameStatus(check?'Check! Your turn':'Your turn',check?'check':''); else botMove(); }
-
-// ==================== CLOCKS ====================
-function startClocks(){ updateClockDisplay(); game.clockInterval=setInterval(()=>{ if(!game||game.gameOver){stopClocks();return;} game.clock[game.turn]-=1; if(game.clock[game.turn]<=0){ game.clock[game.turn]=0; updateClockDisplay(); stopClocks(); const loser=game.turn; const playerWon=loser!==game.playerSide; endGame(playerWon?'win':'loss',playerWon?'Opponent ran out of time.':'You ran out of time.'); return; } updateClockDisplay(); },1000); }
+function startClocks(){ updateClockDisplay(); game.clockInterval=setInterval(()=>{ if(!game||game.gameOver){stopClocks();return;} game.clock[game.turn]-=1; if(game.clock[game.turn]<=0){ game.clock[game.turn]=0; updateClockDisplay(); stopClocks(); const playerWon=game.turn!==game.playerSide; endGame(playerWon?'win':'loss',playerWon?'Opponent ran out of time.':'You ran out of time.'); return; } updateClockDisplay(); },1000); }
 function stopClocks(){ if(game&&game.clockInterval){clearInterval(game.clockInterval);game.clockInterval=null;} }
 function updateClockDisplay(){ if(!game||!game.hasClock)return; const po=game.playerSide; $('youClock').textContent=formatTime(game.clock[po]); $('oppClock').textContent=formatTime(game.clock[oppSide(po)]); $('youClock').classList.toggle('active-clock',game.turn===po&&!game.gameOver); $('oppClock').classList.toggle('active-clock',game.turn!==po&&!game.gameOver); $('youClock').classList.toggle('low',game.clock[po]<60); $('oppClock').classList.toggle('low',game.clock[oppSide(po)]<60); }
-
-// ==================== END GAME ====================
-async function endGame(result,message){ game.gameOver=true; stopClocks(); setGameStatus('Game over'); let eloChange=0; if(!isGuest&&currentProfile&&game.isElo){ const prev=currentProfile.elo; const expected=1/(1+Math.pow(10,(game.opponent.elo-prev)/400)); const actual=result==='win'?1:result==='loss'?0:0.5; eloChange=Math.round(32*(actual-expected)); const upd={elo:Math.max(100,prev+eloChange),games:currentProfile.games+1,xp:(currentProfile.xp||0)+(result==='win'?30:result==='draw'?10:5)}; if(result==='win')upd.wins=currentProfile.wins+1;else if(result==='loss')upd.losses=currentProfile.losses+1;else upd.draws=currentProfile.draws+1; const lv=levelFromXp(upd.xp,currentProfile.level); upd.level=lv.level; await updateProfile(upd); if(currentUser)await supabase.from('matches').insert({white:game.playerSide==='sente'?currentUser.id:game.opponent.id,black:game.playerSide==='sente'?game.opponent.id:currentUser.id,winner:result==='win'?(game.playerSide==='sente'?'white':'black'):result==='loss'?(game.playerSide==='sente'?'black':'white'):'draw',moves:game.history.length,mode:game.mode,elo_change_white:game.playerSide==='sente'?eloChange:-eloChange,elo_change_black:game.playerSide==='sente'?-eloChange:eloChange}); updateUserChip(); updateHomeStats(); }
+function endGame(result,message){ game.gameOver=true; stopClocks(); setGameStatus('Game over'); let eloChange=0; if(!isGuest&&currentProfile&&game.isElo){ const prev=currentProfile.elo; const expected=1/(1+Math.pow(10,(game.opponent.elo-prev)/400)); const actual=result==='win'?1:result==='loss'?0:0.5; eloChange=Math.round(32*(actual-expected)); currentProfile.elo=Math.max(100,prev+eloChange); currentProfile.games++; currentProfile.xp=(currentProfile.xp||0)+(result==='win'?30:result==='draw'?10:5); if(result==='win')currentProfile.wins++;else if(result==='loss')currentProfile.losses++;else currentProfile.draws++; const lv=levelFromXp(currentProfile.xp,currentProfile.level); currentProfile.level=lv.level; db.matches.push({white:game.playerSide==='sente'?currentProfile.id:game.opponent.id,black:game.playerSide==='sente'?game.opponent.id:currentProfile.id,winner:result==='win'?(game.playerSide==='sente'?'white':'black'):result==='loss'?(game.playerSide==='sente'?'black':'white'):'draw',moves:game.history.length,mode:game.mode,elo_change_white:game.playerSide==='sente'?eloChange:-eloChange,elo_change_black:game.playerSide==='sente'?-eloChange:eloChange,started_at:Date.now()}); saveDb(); updateUserChip(); renderPlayPage(); }
   const icon=$('endIcon'); const im={win:'trophy',loss:'skull',draw:'handshake'}[result]; icon.className='end-icon '+result; icon.innerHTML=`<i data-lucide="${im}"></i>`; $('endTitle').textContent=result==='win'?'Victory!':result==='loss'?'Defeat':'Draw'; $('endSub').textContent=message; const sign=eloChange>=0?'+':''; $('endElo').textContent=isGuest?'Guest match':`Rating ${sign}${eloChange}`; $('endElo').className='end-elo '+(eloChange>0?'pos':eloChange<0?'neg':''); refreshIcons(); setTimeout(()=>openModal('endModal'),600); }
 $('endReviewBtn').addEventListener('click',()=>closeModal('endModal'));
 $('endNewBtn').addEventListener('click',()=>{closeModal('endModal');showView('homeView');});
-
-// ==================== BACK / FORFEIT ====================
-$('gameBackBtn').addEventListener('click',async()=>{ if(!game||game.gameOver){showView('homeView');return;} if(game.isElo){ const ok=await showConfirm({title:'Leave ranked match?',message:'Leaving now counts as a loss. You will lose rating points.',okText:'Leave & lose',danger:true,icon:'alert-triangle'}); if(ok){ await forfeitGame(); showView('homeView'); } } else { const ok=await showConfirm({title:'Leave match?',message:'Are you sure you want to leave this game?',okText:'Leave',danger:false,icon:'log-out'}); if(ok){ stopClocks(); showView('homeView'); } } });
-async function forfeitGame(){ if(!game)return; game.gameOver=true; stopClocks(); if(!isGuest&&currentProfile&&game.isElo){ const prev=currentProfile.elo; const penalty=Math.round(32*(0-(1/(1+Math.pow(10,(game.opponent.elo-prev)/400))))); const upd={elo:Math.max(100,prev+penalty),games:currentProfile.games+1,losses:currentProfile.losses+1}; await updateProfile(upd); if(currentUser)await supabase.from('matches').insert({white:game.playerSide==='sente'?currentUser.id:game.opponent.id,black:game.playerSide==='sente'?game.opponent.id:currentUser.id,winner:game.playerSide==='sente'?'black':'white',moves:game.history.length,mode:game.mode,elo_change_white:game.playerSide==='sente'?penalty:-penalty,elo_change_black:game.playerSide==='sente'?-penalty:penalty}); updateUserChip(); updateHomeStats(); } }
-
+$('gameBackBtn').addEventListener('click',async()=>{ if(!game||game.gameOver){showView('homeView');return;} if(game.isElo){ const ok=await showConfirm({title:'Leave ranked match?',message:'Leaving now counts as a loss. You will lose rating points.',okText:'Leave & lose',danger:true,icon:'alert-triangle'}); if(ok){ forfeitGame(); showView('homeView'); } } else { const ok=await showConfirm({title:'Leave match?',message:'Are you sure you want to leave this game?',okText:'Leave',danger:false,icon:'log-out'}); if(ok){ stopClocks(); showView('homeView'); } } });
+function forfeitGame(){ if(!game)return; game.gameOver=true; stopClocks(); if(!isGuest&&currentProfile&&game.isElo){ const prev=currentProfile.elo; const penalty=Math.round(32*(0-(1/(1+Math.pow(10,(game.opponent.elo-prev)/400))))); currentProfile.elo=Math.max(100,prev+penalty); currentProfile.games++; currentProfile.losses++; db.matches.push({white:game.playerSide==='sente'?currentProfile.id:game.opponent.id,black:game.playerSide==='sente'?game.opponent.id:currentProfile.id,winner:game.playerSide==='sente'?'black':'white',moves:game.history.length,mode:game.mode,elo_change_white:game.playerSide==='sente'?penalty:-penalty,elo_change_black:game.playerSide==='sente'?-penalty:penalty,started_at:Date.now()}); saveDb(); updateUserChip(); renderPlayPage(); } }
 function showPromoModalGame(piece){$('promoGlyph').textContent=GLYPHS[piece.type].promoted;$('keepGlyph').textContent=GLYPHS[piece.type].normal;openModal('promoModal');}
 document.querySelectorAll('.promo-choice').forEach(el=>el.addEventListener('click',()=>{if(!game||!game.pendingPromotion)return;game.pendingPromotion.move.promote=el.dataset.action==='promote';const move=game.pendingPromotion.move;game.pendingPromotion=null;closeModal('promoModal');executeMove(move,false);}));
 function animateMove(move){const piece=game.board[move.fromR][move.fromC];if(!piece)return;const el=$('gamePieceLayer').querySelector(`[data-id="${piece.id}"]`);if(!el)return;const cs=getGameCellSize();const w=Math.floor(cs*.82);const h=Math.floor(w*1.1);el.style.left=(move.toC*cs+(cs-w)/2)+'px';el.style.top=(move.toR*cs+(cs-h)/2)+'px';if(move.promote){setTimeout(()=>{el.querySelector('.glyph').textContent=GLYPHS[piece.type].promoted;el.classList.add('promoted');},150);}}
@@ -1054,18 +1235,19 @@ $('gameChatToggle').addEventListener('click',()=>$('gameChat').classList.toggle(
 // ==================== GAME CHAT ====================
 function renderGameChat(){const body=$('gameChatBody');body.innerHTML='';game.chat.forEach(msg=>{const el=document.createElement('div');if(msg.system){el.className='game-chat-msg system';el.textContent=msg.text;}else{el.className='game-chat-msg';const user=msg.user;el.innerHTML=`<div class="avatar" data-avatar-url="${user.avatar_url||''}" data-avatar-name="${escapeHtml(user.display_name)}"></div><div class="game-chat-msg-body"><div class="game-chat-msg-header"><div class="game-chat-msg-name" data-user-id="${user.id}">${escapeHtml(user.display_name)}</div><div class="game-chat-msg-time">${new Date(msg.createdAt).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}</div></div><div class="game-chat-msg-text">${escapeHtml(msg.text)}</div></div>`;const av=el.querySelector('.avatar');if(av)renderAvatarFromData(av);el.querySelector('.game-chat-msg-name').addEventListener('click',()=>{if(user.id!=='bot')showContextMenu(el.querySelector('.game-chat-msg-name'),buildUserContextMenu(user.id));});}body.appendChild(el);});refreshIcons();body.scrollTop=body.scrollHeight;}
 function addGameChatMessage(user,text,type){if(!game)return;game.chat.push({id:'gc_'+Date.now(),user:user||{id:'system',display_name:'System',avatar_url:null},text,createdAt:Date.now(),system:type==='system'});if($('gameView').classList.contains('active'))renderGameChat();}
-$('gameChatSend').addEventListener('click',()=>{const input=$('gameChatInput');const text=input.value.trim();if(!text||isGuest||!currentProfile||!game)return;addGameChatMessage(currentProfile,text);input.value='';if(!game.opponent.isBot&&Math.random()<0.4){setTimeout(()=>{if(!game)return;const replies=['gg','nice','ty','gl hf','wp','lol'];addGameChatMessage(game.opponent,replies[Math.floor(Math.random()*replies.length)]);},1500+Math.random()*3000);}});
+$('gameChatSend').addEventListener('click',()=>{const input=$('gameChatInput');const text=input.value.trim();if(!text||isGuest||!currentProfile||!game)return;addGameChatMessage(currentProfile,text);input.value='';if(!game.opponent.is_bot&&Math.random()<0.4){setTimeout(()=>{if(!game)return;const replies=['gg','nice','ty','gl hf','wp','lol'];addGameChatMessage(game.opponent,replies[Math.floor(Math.random()*replies.length)]);},1500+Math.random()*3000);}});
 $('gameChatInput').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();$('gameChatSend').click();}});
 
-// ==================== QUICK ACTIONS ====================
-document.querySelectorAll('.quick-action').forEach(btn=>btn.addEventListener('click',()=>toast('Coming soon','This feature is in development.','info')));
-
-// ==================== RESIZE ====================
-window.addEventListener('resize',()=>{if(game&&$('gameView').classList.contains('active'))renderGame();});
-
-// ==================== INIT ====================
+// ==================== BOOT ====================
+$('demoNoteText').textContent = SUPABASE_LIVE ? 'Connected to your Supabase project.' : 'Running in demo mode (no backend connected). Accounts are stored locally in this browser. Add your Supabase URL + key to go live.';
 applyTheme(); refreshIcons();
-setInterval(()=>{const base=1247,jitter=Math.floor(Math.random()*60)-30;$('onlineCount').textContent=(base+jitter).toLocaleString();},5000);
+const sess=getSession();
+if(sess && !sess.guest && db.users[sess.userId]){ currentUser=sess.userId; currentProfile=db.users[sess.userId]; isGuest=false; enterApp(); }
+else if(sess && sess.guest){ isGuest=true; enterApp(); }
+else { showView('authView'); refreshIcons(); }
+setInterval(()=>{const base=1247,jitter=Math.floor(Math.random()*60)-30;const el=$('onlineCount');if(el)el.textContent=(base+jitter).toLocaleString();},5000);
+window.addEventListener('load',refreshIcons);
+window.addEventListener('resize',()=>{if(game&&$('gameView').classList.contains('active'))renderGame();});
 })();
 </script>
 </body>
