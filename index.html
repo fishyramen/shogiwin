@@ -3049,34 +3049,107 @@ addEventListener('beforeunload',()=>{if(queueTimer&&sb)navigator.sendBeacon&&0;}
 
 /* ═══════════ BOOT ═══════════ */
 async function boot(){
-  applyTheme();applySound();fillCountrySelect();paintMode();syncSwitches();icons();
-  if(!sb){show('configScreen');return;}
-  const{data:{session}}=await sb.auth.getSession();
-  if(session){await afterAuth(session);}
-  else show('authScreen');
-  sb.auth.onAuthStateChange(async(ev,sess)=>{
-    if(ev==='SIGNED_IN'&&sess&&!me)await afterAuth(sess);
-    if(ev==='SIGNED_OUT'){teardownChannels();me=null;profile=null;guest=false;show('authScreen');}
-  });
-}
-async function afterAuth(sess){
-  me=sess.user;guest=false;offline=false;
-  let p=await getProfile(me.id,true);
-  if(!p){
-    const meta=me.user_metadata||{};
-    const uname=(meta.username||('player_'+me.id.slice(0,8))).toLowerCase().replace(/[^a-z0-9_]/g,'').slice(0,20)||('player_'+me.id.slice(0,8));
-    const{data:created,error}=await sb.from('profiles').insert({id:me.id,username:uname,display_name:meta.display_name||'Player'}).select().single();
-    if(error){
-      const{data:again}=await sb.from('profiles').select('*').eq('id',me.id).maybeSingle();
-      p=again;
-      if(!p){show('authScreen');return authErr('liErr','Profile could not be created: '+error.message);}
-    }else p=created;
-    profCache[me.id]=p;
+  applyTheme();
+  applySound();
+  fillCountrySelect();
+  paintMode();
+  syncSwitches();
+  icons();
+
+  const recover = (message) => {
+    console.warn('[shogi.win] boot recovery:', message);
+
+    // Always leave the loading screen.
+    show('authScreen');
+
+    const box = $('liErr');
+    if (box) {
+      box.classList.remove('hide');
+      const span = box.querySelector('span');
+      if (span) span.textContent = message;
+    }
+
+    if (typeof toast === 'function') {
+      toast('Connection issue', message, 'err');
+    }
+
+    icons();
+  };
+
+  // If Supabase was never initialized, show the setup screen.
+  if (!sb) {
+    show('configScreen');
+    return;
   }
-  profile=p;
-  if(p.banned){await sb.auth.signOut();me=null;profile=null;show('authScreen');return authErr('liErr','This account is suspended.');}
-  if(!p.country&&!p.bio&&!p.avatar_url)startOnboard();
-  else enterApp();
+
+  let settled = false;
+
+  // Hard timeout so the UI can never stay stuck on loading.
+  const timeout = setTimeout(() => {
+    if (settled) return;
+    settled = true;
+
+    recover(
+      'Supabase is not responding. Check config.js, make sure the project is not paused, then reload. You can still practice vs the bot as a guest.'
+    );
+  }, 7000);
+
+  try {
+    const result = await Promise.race([
+      sb.auth.getSession(),
+      new Promise((_, reject) =>
+        setTimeout(() => reject(new Error('AUTH_TIMEOUT')), 6500)
+      )
+    ]);
+
+    clearTimeout(timeout);
+
+    if (settled) return;
+    settled = true;
+
+    const session = result?.data?.session || null;
+
+    if (session) {
+      await afterAuth(session);
+    } else {
+      show('authScreen');
+    }
+  } catch (err) {
+    clearTimeout(timeout);
+
+    if (settled) return;
+    settled = true;
+
+    const msg =
+      err && err.message === 'AUTH_TIMEOUT'
+        ? 'Login service timed out. Check your Supabase URL and anon key in config.js.'
+        : 'Could not connect to Supabase: ' + (err?.message || 'Unknown error');
+
+    recover(msg);
+  }
+
+  // Keep listening for login/logout after the initial check.
+  sb.auth.onAuthStateChange(async (event, session) => {
+    if (event === 'SIGNED_IN' && session && !me) {
+      await afterAuth(session);
+    }
+
+    if (event === 'SIGNED_OUT') {
+      teardownChannels();
+      me = null;
+      profile = null;
+      guest = false;
+      show('authScreen');
+    }
+  });
+
+  // Final safety net: if anything throws before the code above finishes,
+  // still drop the user on a usable screen instead of a dead spinner.
+  setTimeout(() => {
+    if ($('boot').classList.contains('on')) {
+      recover('The app took too long to start. Please reload or continue as a guest.');
+    }
+  }, 9000);
 }
 boot();
 })();
